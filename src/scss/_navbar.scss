@@ -1,0 +1,120 @@
+
+.navbar{
+    // background-color: color(white);
+    box-shadow: 0 1px 7px rgba($black, 0.1);
+    .container{
+        padding: 0 15px;
+        .navbar-brand{
+            display: block;
+            margin: 0;
+            padding: 0;
+            img{
+                height: 50px;
+                @media (min-width: $phones) {
+                    height: 65px;
+                }
+            }
+        }   
+    }
+}
+
+.navbar-toggler{
+    border: none;
+    padding: 0;
+    color: color(blueish) !important;
+    .navbar-toggler-icon{
+        filter: invert(10%) sepia(63%) saturate(3533%) hue-rotate(323deg) brightness(84%) contrast(99%);
+    }
+}
+
+.navbar-nav{
+    margin: 0 -8px;
+    .nav-item{
+        margin: 0 8px;
+        .nav-link{
+            color: color(white);
+            font-size: 14px;
+            font-family: 'dinMedium';
+            @media (min-width: $tablets) {
+                font-size: 16px;
+            }
+        }
+        &:focus,
+        &:hover,
+        &.active{
+            .nav-link{
+                color: color(yellowish);
+                background-color: rgba($black, 0.15);
+            }
+        }
+    }
+}
+
+.btns-nav{
+    margin: 0 -4px;
+    .nav-link{
+        margin: 0 2px;
+        padding: 6px;
+        @include center();
+        @media (min-width: $phones) {
+            margin: 0 4px;
+            padding: 7px 12px;
+            flex-direction: row;
+        }
+        img{
+            height: 18px;
+        }
+        &.dropdown{
+            padding: 0;
+            .dropdown-toggle{
+                padding: 6px;
+                @media (min-width: $phones) {
+                    padding: 7px 12px;
+                }
+                &::after{
+                    display: none;
+                    @media (min-width: $phones) {
+                        display: inline-block;
+                    }
+                }
+
+            }
+        }
+        span{
+            display: none;
+            @media (min-width: $phones) {
+                display: inline;
+            }
+        }
+    }
+}
+
+
+.dropdown-menu{
+    .dropdown-item{
+        padding: 0.25rem 1rem;
+        figure{
+            width: 24px;
+            height: 24px;
+            border-radius: 4px;
+            background-color: rgba($yellowish, 0.2);
+            @include center();
+            img{
+                width: 65%;
+                object-fit: contain;
+            }
+        }
+        .d-flex{
+            span{
+                display: block;
+                font-size: 16px;
+                font-family: 'dinMedium';
+            }
+        }
+        &:hover,
+        &:focus,
+        &:active{
+            background-color: color(light);
+        }
+    }
+}

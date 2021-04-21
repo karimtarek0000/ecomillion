@@ -1,0 +1,59 @@
+header{
+    background-color: color(blueish);
+    // .content{
+    //     // @include bg-base('header.png');
+    // }
+}
+
+.header-item{
+    .inner{
+        text-align: center;
+        color: color(white);
+        @media (min-width: $desktops) {
+            max-width: 400px;
+            text-align: right;
+        }
+        p{
+            font-size: 16px;
+            margin: 33px 0;
+            @media (min-width: $phones) {
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+
+.header-slider{
+    padding: 80px 0 30px;
+    @media (min-width: $desktops) {
+        padding: 150px 0 70px;
+    }
+    .slick-dots{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 -1px;
+        margin-top: 70px;
+        @media (min-width: $desktops) {
+            margin-top: 130px;
+        }
+        @media (min-width: $desktops) {
+            justify-content: flex-start;
+        }
+        li{
+            button{
+                font-size: 0;
+                border: none;
+                border-radius: 100px;
+                margin: 0 1px;
+                background-color: color(white);
+            }
+            &.slick-active{
+                button{
+                    background-color: color(yellowish);
+                }
+            }
+        } 
+    } 
+}

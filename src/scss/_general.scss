@@ -1,0 +1,213 @@
+/* ========== General Classes ========== */
+// colors
+.is-primary{
+    color: color(blueish) !important;
+}
+.is-accent{
+    color: color(yellowish);
+}
+.is-dimmed{
+    color: color(grey);
+}
+
+.bg-primary{
+    color: color(white);
+    background-color: color(blueish) !important;
+}
+.bg-light-primary{
+    background-color: rgba($blueish, 0.05);
+}
+.bg-light{
+    background-color: color(light) !important;
+}
+.bg-accent{
+    background-color: color(yellowish);
+}
+
+// Fonts
+.fBold{
+    font-weight: bold;
+    font-family: 'dinBold';
+}
+.f16{
+    font-size: 14px;
+    @media (min-width: $tablets) {
+        font-size: 16px;
+    }
+}
+
+.f17{
+    font-size: 15px;
+    @media (min-width: $tablets) {
+        font-size: 17px;
+    }
+}
+
+.f20{
+    font-size: 18px;
+    @media (min-width: $phones) {
+        font-size: 20px;
+    }
+}
+
+.f25{
+    font-size: 20px;
+    @media (min-width: $phones) {
+        font-size: 25px;
+    }
+}
+
+.f40{
+    font-size: 28px;
+    @media (min-width: $phones) {
+        font-size: 32px;
+    }
+    @media (min-width: $tablets) {
+        font-size: 40px;
+    }
+}
+
+.f50{
+    font-family: 'dinHeavy';
+    font-size: 30px;
+    @media (min-width: $phones) {
+        font-size: 40px;
+    }
+    @media (min-width: $tablets) {
+        font-size: 50px;
+    }
+}
+
+.f60{
+    font-size: 50px;
+    @media (min-width: $phones) {
+        font-size: 60px;
+    }
+}
+
+/* ========== General styles ========== */
+a{
+    color: $black;
+    &:hover{
+        text-decoration: none;
+        color: $blueish;
+        span{
+            color: $blueish;
+        }
+    }
+}
+
+.hidden{
+    display: none;
+}
+
+
+.title{
+    font-size: 20px;
+    margin-bottom: 10px;
+    @media (min-width: $phones) {
+        font-size: 25px;
+    }
+}
+.subtitle{
+    font-size: 12px;
+    color: color(grey);
+    @media (min-width: $phones) {
+        font-size: 14px;
+    }
+}
+
+
+.dropdown-menu{
+    border: none;
+    box-shadow: 0 0 10px rgba($black, 0.15);
+    @media (min-width: $tablets) {
+        right: 0;
+        left: -115px;
+    }
+}
+
+
+.badge{
+    display: block !important;
+    width: 24px;
+    height: 24px;
+    line-height: 18px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-family: 'dinMedium';
+    color: color(white);
+    background-color: color(yellowish);
+    
+}
+
+
+
+
+.sec-block{
+    padding: 40px 0;
+    @media (min-width: $tablets) {
+        padding: 100px 0;
+    }
+    .sec-head{
+        position: relative;
+        margin-bottom: 50px;
+        @media (min-width: $tablets) {
+            margin-bottom: 90px;
+        }
+        .title{
+            color: color(black);
+            font-size: 26px;
+            position: relative;
+            @media (min-width: $phones) {
+                font-size: 30px;
+            }
+            @media (min-width: $tablets) {
+                font-size: 40px;
+            }
+            &::after{
+                position: absolute;
+                top: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                content: '';
+                font-size: 40px;
+                @media (min-width: $tablets) {
+                    font-size: 60px;
+                }
+            }
+        }
+        // .btn{
+        //     margin-top: 25px;
+        //     // position: absolute;
+        //     // top: 50%;
+        //     // left: 50%;
+        //     // transform: translate(-50%, -50%);
+        //     @media (min-width: $tablets) {
+        //         margin-top: 0;
+        //         position: absolute;
+        //         top: 50%;
+        //         left: 0;
+        //         transform: translate(0, -50%);
+        //     }
+        // }
+    }
+}
+
+
+.grid{
+    margin: -16px -8px;
+    .slide-item{
+        text-align: center;
+        width: auto !important;
+        height: auto;
+        margin: 16px 8px;
+    }
+}
+
+.main-space{
+    padding: 25px 15px;
+    @media (min-width: $phones) {
+        padding: 50px 0;
+    }
+}

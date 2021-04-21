@@ -1,0 +1,19 @@
+@import '_variables';
+
+html{
+    direction: ltr;
+}
+
+body{
+    text-align: left;
+}
+
+
+.top-nav{
+    .contact{
+        .icon{
+            margin-left: 0;
+            margin-right: 10px;
+        }
+    }
+}

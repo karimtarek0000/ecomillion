@@ -1,0 +1,326 @@
+@@include(
+'./views/includes/header.html',
+{"webRoot": ".",
+"document-title": "EcoMillion",
+"page-id": "home"}
+)
+
+<section>
+    <div id="mainSlider" class="carousel py-sm-5 pt-md-4 pb-md-0 slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-md-6 p-0 text-side position-relative">
+                            <div class="content m-4 my-md-0">
+                                <img src="@@webRoot/assets/img/device.svg" alt="">
+                                <h1 class="f40 is-primary mt-2 pt-2 mt-md-4">صمم موقعك اليوم</h1>
+                                <p class="my-3 my-md-5">من خالل مدونة طبية خاصة لعملائك يتمكن فريق العمل الطبي من نشر
+                                    محتوى طبي تثقيفي بأسلوب شيق جذاب</p>
+                                <a href="" class="btn blueish">اطب خدمتك الأن</a>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 p-0 img-side">
+                            <img src="@@webRoot/assets/img/main.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-md-6 p-0 text-side position-relative">
+                            <div class="content m-4 my-md-0">
+                                <img src="@@webRoot/assets/img/social-media.svg" alt="">
+                                <h1 class="f40 is-primary mt-2 pt-2 mt-md-4">موقع للمستقبل</h1>
+                                <p class="my-3 my-md-5">من خالل مدونة طبية خاصة لعملائك يتمكن فريق العمل الطبي من نشر
+                                    محتوى طبي تثقيفي بأسلوب شيق جذاب</p>
+                                <a href="" class="btn blueish">اطب خدمتك الأن</a>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 p-0 img-side">
+                            <img src="@@webRoot/assets/img/main.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#mainSlider" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#mainSlider" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+</section>
+
+<!-- About section -->
+<section class="sec-block" id="about">
+    <div class="container">
+        <div class="sec-head text-center">
+            <h2 class="title">عن الشركة</h2>
+        </div>
+        <div class="sec-content">
+            <div class="row">
+                @@for (var item = 0; item < about.length; item++){ <div class="col-6 col-md-3 mt-4 mt-md-0">
+                    <div class="card-item text-center">
+                        <figure class="mx-auto"><img src=@@webRoot/assets/img/`+about[item].img+` alt=""></figure>
+                        <h4 class="card-name mb-3 mb-md-4 f25">`+about[item].title+`</h4>
+                        <p class="card-desc is-dimmed">`+about[item].desc+`</p>
+                    </div>
+            </div>
+            }
+        </div>
+    </div>
+    </div>
+</section>
+
+<!-- Success techniques section -->
+<section class="sec-block" id="crm">
+    <div class="container">
+        <div class="sec-head text-center">
+            <h2 class="title">برنامج إدارة علاقات العملاء</h2>
+            <h2 class="is-primary f50">CRM</h2>
+        </div>
+        <div class="sec-content">
+            <div class="row">
+                <div class="col-md-7">
+                    <div class="numeric-list mx-auto mx-md-0">
+                        <h5 class="is-primary f20 mb-5">أهمية إدرة علاقات العملاء والحفاظ عليهم من الناحية الإقتصادية
+                            تتلخص في التالي:</h5>
+                        <ul class="list-group list-group-flushs">
+                            <li class="my-2 my-md-3 px-0 list-group-item d-flex">
+                                <span class="decimal is-accent f20 fBold ms-4 flex-shrink-0">1</span>
+                                تكلفة الحفاظ على العميل أقل بسبع مرات من تكلفة الحصول على عميل جديد
+                            </li>
+                            <li class="my-2 my-md-3 px-0 list-group-item d-flex">
+                                <span class="decimal is-accent f20 fBold ms-4 flex-shrink-0">2</span>
+                                تؤكد أبحاث السوق، أن زيادة معدل الإحتفاظ بالعملاء الحاليين بنسبة 5 ٪تزيد أرباح الشركة
+                                بنسبة 25 ٪إلى 95.٪
+                            </li>
+                            <li class="my-2 my-md-3 px-0 list-group-item d-flex">
+                                <span class="decimal is-accent f20 fBold ms-4 flex-shrink-0">3</span>
+                                احتمالية تحويل عميل حالي إلى مكرر من 60 %إىل 70 %مقابل من 5 َ%إىل 20 %لتحويل
+                                عميل محتمل إلى عميل
+                            </li>
+                            <li class="my-2 my-md-3 px-0 list-group-item d-flex">
+                                <span class="decimal is-accent f20 fBold ms-4 flex-shrink-0">4</span>
+                                العملاء الأوفياء يشرتون بقيمة أعلى عرشة أضعاف قيمة الشراء الأولى له يجرب مصداقية
+                                الشركة وخدمتها
+                            </li>
+                            <li class="my-2 my-md-3 px-0 list-group-item d-flex">
+                                <span class="decimal is-accent f20 fBold ms-4 flex-shrink-0">5</span>
+                                الحفاظ عىل العملاء يساعدك في جذب عملاء جدد
+                            </li>
+                        </ul>
+                        <a href="" class="btn blueish">شاهد المزيد</a>
+                    </div>
+                </div>
+                <div class="col-md-5 align-self-center mt-5 mt-md-0 text-center">
+                    <img src="@@webRoot/assets/img/crm-img.svg" class="mx-auto" alt="CRM">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- status section -->
+<section class="sec-block mt-5 pt-5" id="stats">
+    <div class="container">
+        <div class="sec-head text-center">
+            <h2 class="title">من خلاله ستحصل على</h2>
+        </div>
+        <div class="sec-content">
+            <div class="row">
+                <div
+                    class="stats-content bg-primary p-4 p-md-5 text-center d-flex flex-wrap justify-content-center align-items-baseline">
+                    <div
+                        class="col-6 col-sm-4 col-lg d-flex flex-column align-items-center justify-content-center p-3 p-md-4">
+                        <span class="is-accent f50">300%</span>
+                        <span>تحسين في معدلات التحويل القيادية</span>
+                    </div>
+                    <div
+                        class="col-6 col-sm-4 col-lg d-flex flex-column align-items-center justify-content-center p-3 p-md-4">
+                        <span class="is-accent f50">41%</span>
+                        <span>زيادة الإيرادات بالنسبة لرجل الأعمال</span>
+                    </div>
+                    <div
+                        class="col-6 col-sm-4 col-lg d-flex flex-column align-items-center justify-content-center p-3 p-md-4">
+                        <span class="is-accent f50">27%</span>
+                        <span>تحسينات في الاحتفاظ بعملائنا الكرام</span>
+                    </div>
+                    <div
+                        class="col-6 col-sm-4 col-lg d-flex flex-column align-items-center justify-content-center p-3 p-md-4">
+                        <span class="is-accent f50">24%</span>
+                        <span>التقليل في دوائر المبيعات المعقدة</span>
+                    </div>
+                    <div
+                        class="col-6 col-sm-4 col-lg d-flex flex-column align-items-center justify-content-center p-3 p-md-4">
+                        <span class="is-accent f50">23%</span>
+                        <span>تقليل المشتريات وتقليل تكلفة التسويق</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Success techniques section -->
+<section class="sec-block" id="tools">
+    <div class="container">
+        <div class="sec-head text-center">
+            <h2 class="title">تستحق أفضل تقنيات النجاح</h2>
+        </div>
+        <div class="sec-content">
+            <div class="row justify-content-center">
+                @@for (var item = 0; item < tools.length; item++){ <div class="col-6 col-md-4 mt-4 mt-md-5">
+                    <div class="card-item text-center">
+                        <figure class="mx-auto"><img src=@@webRoot/assets/img/`+tools[item].img+` alt=""></figure>
+                        <h4 class="card-name mb-3 mb-md-4 f25">`+tools[item].title+`</h4>
+                        <p class="card-desc is-dimmed">`+tools[item].desc+`</p>
+                    </div>
+            </div>
+            }
+        </div>
+    </div>
+    </div>
+</section>
+
+
+<!-- works section -->
+<section class="sec-block bg-light-primary" id="works">
+    <div class="container">
+        <div class="sec-head text-center">
+            <h2 class="title">أعمال إبتدي</h2>
+            <h2 class="is-primary f50">شريكنا في النجاح</h2>
+        </div>
+        <div class="sec-content">
+            <div class="row position-relative">
+                <div class="col-12">
+                    <div class="slider owl-carousel nav-blueish">
+                        @@for (var item = 0; item < slider.length; item++){ <div class="slider-item text-center">
+                            <figure class="mx-auto"><img src=@@webRoot/assets/img/slider/`+slider[item]+` alt="">
+                            </figure>
+                            <div class="hover">
+                                <img src="@@webRoot/assets/img/logo.png" alt="">
+                                <p class="fBold mt-3">تصميم موقع تعريفي بشركة</p>
+                            </div>
+                    </div>
+                    }
+                </div>
+            </div>
+            <a href="" class="btn blueish position-absolute bottom-0 start-0 ms-2 w-auto">شاهد كل أعمال إبتدي</a>
+        </div>
+    </div>
+    </div>
+</section>
+
+
+<!-- works 2 section -->
+<section class="sec-block" id="works2">
+    <div class="container">
+        <div class="sec-head text-center">
+            <h2 class="title">أعمالنا في التصميم والانتاج</h2>
+        </div>
+        <div class="sec-content">
+            <div class="row position-relative">
+                <div class="col-12">
+                    <div class="slider owl-carousel nav-yellowish">
+                        @@for (var item = 0; item < slider.length; item++){ <div class="slider-item text-center">
+                            <figure class="mx-auto"><img src=@@webRoot/assets/img/slider/`+slider[item]+` alt="">
+                            </figure>
+                            <div class="hover">
+                                <img src="@@webRoot/assets/img/logo.png" alt="">
+                                <p class="fBold mt-3">تصميم موقع تعريفي بشركة</p>
+                            </div>
+                    </div>
+                    }
+                </div>
+            </div>
+            <a href="" class="btn yellowish position-absolute bottom-0 start-0 ms-2 w-auto">كل أعمال التصميم
+                والإنتاج</a>
+        </div>
+    </div>
+    </div>
+</section>
+
+
+<!-- Blog section -->
+<section class="sec-block bg-light" id="blog">
+    <div class="container">
+        <div class="sec-head text-center">
+            <h2 class="title">المدونة</h2>
+        </div>
+        <div class="sec-content">
+            <div class="row position-relative">
+                <div class="col-12">
+                    <div class="blog-slider owl-carousel nav-blueish">
+                        @@for (var item = 0; item < blog.length; item++){ <div class="slider-item">
+                            <figure class="mx-auto">
+                                <img src=@@webRoot/assets/img/`+blog[item]+` alt="">
+                            </figure>
+                            <div class="item-body">
+                                <h6 class="fBold">كيف تحصل على موقع مثالي صديق
+                                    لمحركات البحث ؟</h6>
+                                <p class="is-dimmed my-3 mb-4">البحث هو عملية زيادة جودة وكمية حركة مرور موقع الويب</p>
+                                <a href="" class="is-primary fBold">
+                                    <i class="fas fa-chevron-left"></i>
+                                    اقرأ المزيد
+                                </a>
+                            </div>
+                    </div>
+                    }
+                </div>
+            </div>
+            <a href="" class="btn blueish position-absolute bottom-0 start-0 ms-2 w-auto">المزيد</a>
+        </div>
+    </div>
+    </div>
+</section>
+
+
+<!-- Contact section -->
+<section class="sec-block" id="contact">
+    <div class="container">
+        <div class="sec-head text-center">
+            <h2 class="title">رسالة سريعة</h2>
+        </div>
+        <div class="sec-content">
+            <div class="row justify-content-center">
+                <div class="col-md-7">
+                    <form action="">
+                        <input class="form-control p-4 mb-3" type="text" name="username" id="username"
+                            placeholder="اسمك الكريم">
+                        <input class="form-control p-4 mb-3" type="email" name="email" id="email"
+                            placeholder="البريد الإلكتروني">
+                        <textarea class="form-control p-4 mb-3" name="message" id="message" rows="5"
+                            placeholder="نص الرسالة"></textarea>
+                        <input class="btn yellowish w-100" type="submit" value="ارسل رسالة">
+                    </form>
+                </div>
+                <div class="col-md-5 mt-5 mt-md-0">
+                    <div class="contact-info py-5 text-center">
+                        <div class="d-flex flex-column">
+                            <i class="fas fa-phone"></i>
+                            <span class="f20 mt-3">0096616111</span>
+                        </div>
+                        <div class="d-flex flex-column my-4">
+                            <i class="fab fa-whatsapp"></i>
+                            <span class="f20 mt-3">0096616111</span>
+                        </div>
+                        <div class="d-flex flex-column">
+                            <i class="fas fa-envelope-open-text"></i>
+                            <span class="f20 mt-3">info@gmail.com</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+@@include('./views/includes/footer.html', {"webRoot": "."})

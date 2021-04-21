@@ -1,0 +1,80 @@
+.carousel-control-next,
+.carousel-control-prev{
+    @media (min-width: $tablets) {
+        top: unset;
+        bottom: 17px;
+        border: 1px solid color(yellowish);
+        width: 50px;
+        height: 50px;
+        color: color(yellowish);
+        &:hover{
+            color: color(blueish);
+            background-color: color(yellowish);
+        }
+    }
+}
+.carousel-control-next{
+    @media (min-width: $tablets) {
+        right: 43%;
+    }
+    @media (min-width: $desktops) {
+        right: 44%;
+    }
+    @media (min-width: $HD) {
+        right: 45%;
+    }
+}
+.carousel-control-prev{
+    @media (min-width: $tablets) {
+        left: 43%;
+    }
+    @media (min-width: $desktops) {
+        left: 44%;
+    }
+    @media (min-width: $HD) {
+        left: 45%;
+    }
+}
+
+
+@mixin owl-nav($primary, $secondary){
+    .owl-nav{
+        margin: 0 -8px;
+        margin-top: 60px;
+        [class*=owl-]{
+            font-size: 14px;
+            line-height: 2.2;
+            width: 30px;
+            height: 30px;
+            color: $secondary;
+            border: 1px solid $secondary;
+            background-color: white;
+            margin: 0 8px;
+            @media (min-width: $tablets) {
+                font-size: 20px;
+                line-height: 2.6;
+                width: 50px;
+                height: 50px;
+            }
+            &:hover {
+                color: $primary;
+                border-color: $secondary;
+                background-color: $secondary;
+            }
+        }
+    }
+}
+
+
+.nav-blueish{
+    @include owl-nav($white, $blueish);
+}
+
+.nav-yellowish{
+    @include owl-nav($blueish, $yellowish);
+}
+
+.owl-stage{
+    display: flex;
+    align-items: center;
+}

@@ -1,0 +1,207 @@
+@mixin watermark($image-mark){
+    position: relative;
+    z-index: 0;
+    &::after{
+        z-index: -1;
+        position: absolute;
+        content: '';
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -30%);
+        background-image: url($image-mark);
+        background-size: 100%;
+        background-repeat: no-repeat;
+        height: 1000px;
+        width: 100%;
+    }
+}
+
+#mainSlider{
+    background-color: color(blueish);
+    @media (min-width: $tablets) {
+        height: calc(100vh - 81px);
+    }
+    .carousel-inner{
+        height: 100%;
+    }
+    .text-side{
+        // height: 35vh;
+        color: color(white);
+        background-image: 
+            linear-gradient(
+                to bottom,
+                color(yellowish) 80%,
+                color(yellowish) 17%,
+                #F8C67B 17%
+            )
+        ;
+        @include watermark('../img/logo-bg.svg');
+        @media (min-width: $tablets) {
+            background-image: 
+                linear-gradient(
+                    to left,
+                    color(yellowish) 80%,
+                    color(yellowish) 17%,
+                    #F8C67B 17%
+                )
+            ;
+        }
+        &::after{
+            height: 500px;
+            top: -70%;
+            left: 35%;
+            transform: rotate(270deg);
+            @media (min-width: $tablets) {
+                height: 880px;
+                top: -40%;
+                left: 100%;
+            }
+            @media (min-width: $desktops) {
+                left: 75%;
+            }
+            @media (min-width: $HD) {
+                left: 55%;
+            }
+        }
+        .content{
+            text-align: center;
+            @media (min-width: $tablets) {
+                text-align: right;
+                position: absolute;
+                top: 50%;
+                max-width: 445px;
+                transform: translateY(-50%);
+                margin: 0 70px !important;
+                // right: 70px;
+            }
+            img{
+                height: 50px;
+                @media (min-width: $tablets) {
+                    height: 80px;
+                }
+            }
+        }
+    }
+    .img-side{
+        height: 35vh;
+        @media (min-width: $tablets) {
+            height: 750px;
+        }
+        img{
+            height: 100%;
+            width: 100%;
+            object-position: bottom;
+            object-fit: cover;
+            @media (min-width: $tablets) {
+                object-position: left;
+            }
+        }
+    }
+}
+
+.numeric-list{
+    width: 85%;
+    li{
+        background-color: transparent;
+        border: none;
+        font-family: 'dinMedium';
+        .decimal{
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            background-color: color(white);
+            box-shadow: 0 3px 6px rgba($black, 0.1);
+            @include center();
+            @media (min-width: $tablets) {
+                width: 40px;
+                height: 40px;
+            }
+        }
+        &:hover{
+            .decimal{
+                color: color(blueish);
+                background-color: color(yellowish);
+            }
+        }
+    }
+}
+
+
+
+#crm{
+    @include watermark('../img/bg.svg');
+    img{
+        width: 70%;
+        height: auto;
+        object-fit: contain;
+        @media (min-width: $tablets) {
+            width: 100%;
+        }
+    }
+}
+
+
+#tools{
+    @include watermark('../img/bg.svg');
+    &::after{
+        left: 0;
+        transform: translate(0, -45%) rotate(180deg);
+    }
+}
+
+
+.contact-info{
+    @include center();
+    height: 100%;
+    color: color(white);
+    background-image: 
+        linear-gradient(
+            to left, 
+            rgba($blueish, 1), 
+            rgba($blueish, 0.5)
+        ),
+        url('../img/contact.png')
+    ;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    i{
+        font-size: 30px;
+    }
+}
+
+#stats{
+    .stats-content{
+        @include watermark('../img/logo-bg.svg');
+        &::after{
+            right: -200%;
+            left: unset;
+            transform: translate(0, -50%);
+            height: 520px;
+            width: 835px;
+            @media (min-width: $xs-phones) {
+                right: -145%;
+            }
+            @media (min-width: $phones) {
+                right: -115%;
+            }
+            @media (min-width: $tablets) {
+                right: -65%;
+            }
+            @media (min-width: $desktops) {
+                right: -25%;
+            }
+        }
+    }
+}
+
+// #works{
+//     @include watermark('../img/logo-bg.svg');
+//     &::after{
+//         left: -40%;
+//         left: unset;
+//         transform: translate(0, -50%);
+//         height: 1020px;
+//         width: 1640px;
+//     }
+// }
