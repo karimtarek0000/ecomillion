@@ -1,51 +1,61 @@
-@mixin generalBtn{
-    font-size: 14px;
-    padding: 7px 10px;
+@mixin generalBtn {
+  font-size: 14px;
+  padding: 7px 10px;
+  font-family: "dinBold";
+  border-radius: 0;
+  border: 1px solid;
+  @media (min-width: $phones) {
+    font-size: 17px;
+    padding: 10px 14px;
+  }
+  span {
     font-family: "dinBold";
-    border-radius: 0; 
-    border: 1px solid;
-    @media (min-width: $phones) {
-        font-size: 17px;
-        padding: 10px 14px;
-    }
-    span{
-        font-family: "dinBold";
-    }
+  }
 }
 
+.btn {
+  @include generalBtn();
+  &.blueish {
+    color: color(yellowish);
+    border-color: color(blueish);
+    background-color: color(blueish);
+    &.outline {
+      color: color(blueish);
+      background-color: transparent;
+    }
+  }
+  &.yellowish {
+    color: color(blueish);
+    border-color: color(yellowish);
+    background-color: color(yellowish);
+    transition: all 0.5s ease;
+    //
+    &.outline {
+      color: color(yellowish);
+      background-color: transparent;
+    }
 
-.btn{
-    @include generalBtn();
-    &.blueish{
-        color: color(yellowish);
-        border-color: color(blueish);
-        background-color: color(blueish);
-        &.outline{
-            color: color(blueish);
-            background-color: transparent;
-        }
+    @media (hover: hover) {
+      &:hover {
+        $set: rgba($yellowish, 0.9);
+        background-color: $set;
+        border-color: $set;
+      }
     }
-    &.yellowish{
-        color: color(blueish);
-        border-color: color(yellowish);
-        background-color: color(yellowish);
-        &.outline{
-            color: color(yellowish);
-            background-color: transparent;
-        }
-    }
-    // &.danger{
-    //     color: color(white);
-    //     border-color: color(danger);
-    //     background-color: color(danger);
-    //     &.outline{
-    //         color: color(danger);
-    //         background-color: color(white);
-    //     }
-    // }
-    // &.light{
-    //     color: color(blueish);
-    //     border-color: color(light);
-    //     background-color: color(white);
-    // }
+  }
+
+  // &.danger{
+  //     color: color(white);
+  //     border-color: color(danger);
+  //     background-color: color(danger);
+  //     &.outline{
+  //         color: color(danger);
+  //         background-color: color(white);
+  //     }
+  // }
+  // &.light{
+  //     color: color(blueish);
+  //     border-color: color(light);
+  //     background-color: color(white);
+  // }
 }
