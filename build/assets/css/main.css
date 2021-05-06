@@ -2,6 +2,7 @@
 :root {
   --color-white: #ffffff;
   --color-light: #f6f6f6;
+  --color-light-2: #fcfcfd;
   --color-grey: #8d8d8d;
   --color-yellowish: #f6b452;
   --color-blueish: #2b569f;
@@ -125,12 +126,19 @@ img {
 .bg-light {
   background-color: var(--color-light) !important; }
 
+.bg-light-2 {
+  background-color: var(--color-light-2) !important; }
+
 .bg-accent {
   background-color: var(--color-yellowish); }
 
 .fBold {
   font-weight: bold;
   font-family: "dinBold"; }
+
+.fRegular {
+  font-family: "dinRegular";
+  font-weight: normal; }
 
 .f16 {
   font-size: 14px; }
@@ -312,14 +320,35 @@ a {
   .flex-basis-offers {
     flex-basis: calc(95% / 4); } }
 
+@media (min-width: 992px) {
+  .flex-basis-app {
+    flex-basis: calc(99% / 2); } }
+
 .shadows {
   box-shadow: 0px 0px 20px #2b569f0f; }
+  .shadows-app {
+    box-shadow: 0px 0px 20px #38455a1a; }
 
 .margin-title-section {
   margin: 90px 0; }
   @media (max-width: 576px) {
     .margin-title-section {
       margin: 35px 0; } }
+
+.header {
+  height: 90vh;
+  position: relative;
+  background-image: url("../img/future/header.jpg");
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center; }
+  @media (min-width: 576px) {
+    .header {
+      background-position: left; } }
+  .header__info {
+    -webkit-animation: slideUp 1s 0.5s ease-in-out both;
+            animation: slideUp 1s 0.5s ease-in-out both;
+    will-change: animation; }
 
 .btn {
   font-size: 14px;
@@ -599,6 +628,32 @@ textarea.form-control {
   to {
     transform: translateY(0);
     opacity: 1; } }
+
+.accordion-button::after {
+  margin-right: auto;
+  margin-left: 0;
+  height: 2rem;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 18 28' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%232B569F' d='M16.797 11.5c0 .125-.07.266-.16.359l-7.29 7.28c-.1.09-.24.15-.359.15 -.125 0-.266-.07-.359-.16l-7.29-7.29c-.1-.1-.16-.24-.16-.359 0-.125.06-.266.15-.359l.78-.79c.09-.1.21-.16.359-.16 .125 0 .266.06.359.15l6.14 6.14 6.141-6.141c.09-.1.23-.16.359-.16 .125 0 .266.06.359.15l.78.78c.09.09.15.23.15.359Z'/%3E%3C/svg%3E"); }
+
+.accordion-button:not(.collapsed) {
+  background-color: var(--color-blueish);
+  color: var(--color-white); }
+  .accordion-button:not(.collapsed)::after {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 18 28' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23F6B452' d='M16.797 18.5c0 .125-.07.26-.16.35l-.79.78c-.1.09-.22.15-.359.15 -.125 0-.266-.07-.359-.16L8.98 13.47 2.84 19.62c-.1.09-.24.15-.359.15 -.125 0-.266-.07-.359-.16l-.79-.79c-.1-.1-.16-.24-.16-.36 0-.125.06-.27.15-.36l7.28-7.29c.09-.1.23-.16.359-.16 .125 0 .266.06.359.15l7.28 7.28c.09.09.15.23.15.35Z'/%3E%3C/svg%3E"); }
+
+.accordion-button.collapsed .accordion__badge {
+  background-color: var(--color-blueish);
+  color: var(--color-yellowish); }
+
+.accordion-button:focus {
+  border-color: transparent;
+  box-shadow: none; }
+
+.accordion__badge {
+  width: 40px;
+  height: 40px;
+  background-color: var(--color-yellowish);
+  color: var(--color-blueish); }
 
 .navbar {
   box-shadow: 0 1px 7px rgba(0, 0, 0, 0.1); }
@@ -997,21 +1052,6 @@ footer {
     background-position: center;
     background-repeat: no-repeat;
     height: 848px; }
-
-.header {
-  height: 90vh;
-  position: relative;
-  background-image: url("../img/future/header.jpg");
-  background-repeat: no-repeat;
-  background-size: auto;
-  background-position: center; }
-  @media (min-width: 576px) {
-    .header {
-      background-position: left; } }
-  .header__info {
-    -webkit-animation: slideUp 1s 0.5s ease-in-out both;
-            animation: slideUp 1s 0.5s ease-in-out both;
-    will-change: animation; }
 
 .offers__category__card {
   transition: all 0.2s ease; }

@@ -20,6 +20,9 @@
 .bg-light {
   background-color: color(light) !important;
 }
+.bg-light-2 {
+  background-color: color(light-2) !important;
+}
 .bg-accent {
   background-color: color(yellowish);
 }
@@ -28,6 +31,11 @@
 .fBold {
   font-weight: bold;
   font-family: "dinBold";
+}
+
+.fRegular {
+  font-family: "dinRegular";
+  font-weight: normal;
 }
 .f16 {
   font-size: 14px;
@@ -276,8 +284,19 @@ a {
   }
 }
 
+.flex-basis-app {
+  @media (min-width: $desktops) {
+    flex-basis: calc(99% / 2);
+  }
+}
+
 .shadows {
   box-shadow: 0px 0px 20px #2b569f0f;
+
+  //
+  &-app {
+    box-shadow: 0px 0px 20px #38455a1a;
+  }
 }
 
 .margin-title-section {
@@ -285,5 +304,16 @@ a {
 
   @media (max-width: $phones) {
     margin: 35px 0;
+  }
+}
+
+.header {
+  height: 90vh;
+  @include bg-base("future/header.jpg");
+
+  //
+  &__info {
+    animation: slideUp 1s 0.5s ease-in-out both;
+    will-change: animation;
   }
 }
