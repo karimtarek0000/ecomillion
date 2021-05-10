@@ -9,6 +9,9 @@
 .is-dimmed {
   color: color(grey);
 }
+.is-black {
+  color: color(black);
+}
 
 .bg-primary {
   color: color(white);
@@ -37,6 +40,11 @@
   font-family: "dinRegular";
   font-weight: normal;
 }
+
+.fBolder {
+  font-family: "dinHeavy";
+  font-weight: 900;
+}
 .f16 {
   font-size: 14px;
   @media (min-width: $tablets) {
@@ -48,6 +56,13 @@
   font-size: 15px;
   @media (min-width: $tablets) {
     font-size: 17px;
+  }
+}
+
+.f18 {
+  font-size: 15px;
+  @media (min-width: $tablets) {
+    font-size: 18px;
   }
 }
 
@@ -257,6 +272,182 @@ a {
   }
 }
 
+/* ========== Style Sharing ========== */
+//
+.header {
+  height: 90vh;
+  @include bg-base("future/header.jpg");
+
+  //
+  &__info {
+    animation: slideUp 1s 0.5s ease-in-out both;
+    will-change: animation;
+  }
+}
+
+/* ========== Style Sections ========== */
+//
+.offers {
+  //
+  &__category {
+    //
+    &__card {
+      transition: all 0.2s ease;
+
+      //
+      &__price {
+        background-color: rgba($yellowish, 0.1);
+        color: color(blueish);
+      }
+
+      //
+      @media (hover: hover) {
+        &:hover,
+        &:hover &__price {
+          background-color: color(blueish);
+          color: white;
+          transform: translateY(-10px);
+        }
+
+        &:hover {
+          img {
+            filter: invert(71%) sepia(79%) saturate(411%) hue-rotate(337deg)
+              brightness(98%) contrast(96%);
+          }
+        }
+      }
+    }
+  }
+}
+
+//
+.performance {
+  //
+  &__steps {
+    position: relative;
+    //
+    &::after {
+      content: "";
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1076' height='1.5' viewBox='0 0 1076 1.5'%3E%3Cdefs%3E%3Cstyle%3E.a%7Bfill:none;stroke:rgba(43,86,159,0.36);stroke-dasharray:5 5;%7D%3C/style%3E%3C/defs%3E%3Cline class='a' x2='1076' y2='0.5' transform='translate(0 0.5)'/%3E%3C/svg%3E");
+      position: absolute;
+      top: 113px;
+      left: 50%;
+      width: 79%;
+      display: block;
+      height: 2px;
+      z-index: -1;
+      transform: translate(-50%, -50%);
+
+      //
+      @media (max-width: $phones) {
+        display: none;
+      }
+    }
+  }
+}
+
+/* ========== Style SVG ========== */
+//
+.resize-svg {
+  width: 80px;
+  height: 80px;
+
+  @media (max-width: $tablets) {
+    width: 70px;
+    height: 70px;
+  }
+
+  @media (max-width: $phones) {
+    width: 60px;
+    height: 60px;
+  }
+
+  @media (max-width: $xs-phones) {
+    width: 50px;
+    height: 50px;
+  }
+
+  //
+  &-forecasts {
+    width: 20px;
+    height: 27px;
+  }
+
+  //
+  &-performance {
+    width: 50px;
+    height: 38px;
+  }
+}
+
+//
+.svg-fill {
+  //
+  &-blueish {
+    fill: color(blueish);
+  }
+
+  &-yellowish {
+    fill: color(yellowish);
+  }
+}
+
+/* ========== Style Other ========== */
+//
+.mt--45 {
+  margin-top: -45px;
+
+  @media (max-width: $tablets) {
+    margin-top: 0;
+  }
+}
+
+.bg-trans {
+  background-color: transparent;
+}
+
+.form-control {
+  //
+  &.crm {
+    &::placeholder {
+      color: white;
+    }
+  }
+
+  &:focus {
+    background-color: transparent;
+    border-color: white !important;
+  }
+}
+
+//
+.resize-img {
+  width: 70vw;
+}
+
+.object-fit-cover {
+  height: 100%;
+  object-fit: cover;
+}
+
+//
+.padding-section {
+  padding: 100px 0;
+
+  @media (max-width: $phones) {
+    padding: 40px 0;
+  }
+}
+
+//
+.white-space-no {
+  white-space: nowrap;
+
+  @media (max-width: $phones) {
+    white-space: normal;
+  }
+}
+
 //
 .set-size-icon {
   //
@@ -300,11 +491,21 @@ a {
       flex-basis: calc(97% / 2);
     }
   }
+
+  //
+  &-performance {
+    flex-basis: calc(97% / 4);
+
+    //
+    @media (max-width: $phones) {
+      flex-basis: calc(98% / 2);
+    }
+  }
 }
 
 //
 .shadows {
-  box-shadow: 0px 0px 20px #2b569f0f;
+  box-shadow: 0px 0px 20px #2b569f24;
 
   //
   &-app {
@@ -312,122 +513,11 @@ a {
   }
 }
 
+//
 .margin-title-section {
   margin: 90px 0;
 
   @media (max-width: $phones) {
     margin: 35px 0 20px 0;
   }
-}
-
-.padding-section {
-  padding: 100px 0;
-
-  @media (max-width: $phones) {
-    padding: 40px 0;
-  }
-}
-
-/* ========== Style Sharing ========== */
-//
-.header {
-  height: 90vh;
-  @include bg-base("future/header.jpg");
-
-  //
-  &__info {
-    animation: slideUp 1s 0.5s ease-in-out both;
-    will-change: animation;
-  }
-}
-
-//
-.offers {
-  //
-  &__category {
-    //
-    &__card {
-      transition: all 0.2s ease;
-
-      //
-      &__price {
-        background-color: rgba($yellowish, 0.1);
-        color: color(blueish);
-      }
-
-      //
-      @media (hover: hover) {
-        &:hover,
-        &:hover &__price {
-          background-color: color(blueish);
-          color: white;
-          transform: translateY(-10px);
-        }
-
-        &:hover {
-          img {
-            filter: invert(71%) sepia(79%) saturate(411%) hue-rotate(337deg)
-              brightness(98%) contrast(96%);
-          }
-        }
-      }
-    }
-  }
-}
-
-//
-.resize-svg {
-  width: 80px;
-  height: 80px;
-
-  @media (max-width: $tablets) {
-    width: 70px;
-    height: 70px;
-  }
-
-  @media (max-width: $phones) {
-    width: 60px;
-    height: 60px;
-  }
-
-  @media (max-width: $xs-phones) {
-    width: 50px;
-    height: 50px;
-  }
-}
-
-.mt--45 {
-  margin-top: -45px;
-
-  @media (max-width: $tablets) {
-    margin-top: 0;
-  }
-}
-
-.bg-trans {
-  background-color: transparent;
-}
-
-.form-control {
-  //
-  &.crm {
-    &::placeholder {
-      color: white;
-    }
-  }
-
-  &:focus {
-    background-color: transparent;
-    border-color: white !important;
-  }
-}
-
-//
-.resize-img {
-  height: 50vh;
-}
-
-//
-.white-space-no {
-  white-space: nowrap;
 }
