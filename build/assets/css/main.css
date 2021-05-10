@@ -462,7 +462,7 @@ a {
     flex-basis: calc(97% / 2); } }
 
 .flex-basis-performance {
-  flex-basis: calc(97% / 4); }
+  flex-basis: 100px; }
   @media (max-width: 576px) {
     .flex-basis-performance {
       flex-basis: calc(98% / 2); } }

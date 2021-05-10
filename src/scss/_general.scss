@@ -494,9 +494,7 @@ a {
 
   //
   &-performance {
-    flex-basis: calc(97% / 4);
-
-    //
+    flex-basis: 100px; //
     @media (max-width: $phones) {
       flex-basis: calc(98% / 2);
     }
