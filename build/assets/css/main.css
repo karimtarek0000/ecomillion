@@ -368,6 +368,21 @@ a {
     .performance__steps {
       width: 85%; } }
 
+.start-company {
+  position: relative;
+  background-image: url("../img/addbg.svg");
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center; }
+  .start-company__inner {
+    height: 375px; }
+  @media (min-width: 576px) {
+    .start-company {
+      background-position: left; } }
+  @media (max-width: 576px) {
+    .start-company {
+      height: auto; } }
+
 /* ========== Style SVG ========== */
 .resize-svg {
   width: 80px;
@@ -502,6 +517,10 @@ a {
 @media (min-width: 992px) {
   .width-75 {
     width: 75%; } }
+
+@media (min-width: 992px) {
+  .width-95 {
+    width: 95%; } }
 
 .btn {
   font-size: 14px;

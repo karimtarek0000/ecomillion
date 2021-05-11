@@ -355,6 +355,20 @@ a {
   }
 }
 
+//
+.start-company {
+  //
+  &__inner {
+    height: 375px;
+  }
+  //
+  @include bg-base("addbg.svg");
+  //
+  @media (max-width: $phones) {
+    height: auto;
+  }
+}
+
 /* ========== Style SVG ========== */
 //
 .resize-svg {
@@ -560,5 +574,12 @@ a {
   //
   @media (min-width: $desktops) {
     width: 75%;
+  }
+}
+
+.width-95 {
+  //
+  @media (min-width: $desktops) {
+    width: 95%;
   }
 }
