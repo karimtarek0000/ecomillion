@@ -29,6 +29,9 @@
 .bg-accent {
   background-color: color(yellowish);
 }
+.bg-grey-light {
+  background-color: color(grey-light);
+}
 
 // Fonts
 .fBold {
@@ -325,6 +328,7 @@ a {
   //
   &__steps {
     position: relative;
+
     //
     &::after {
       content: "";
@@ -332,7 +336,7 @@ a {
       position: absolute;
       top: 113px;
       left: 50%;
-      width: 79%;
+      width: 80%;
       display: block;
       height: 2px;
       z-index: -1;
@@ -342,6 +346,11 @@ a {
       @media (max-width: $phones) {
         display: none;
       }
+    }
+
+    //
+    @media (min-width: $HD) {
+      width: 85%;
     }
   }
 }
@@ -377,6 +386,16 @@ a {
   &-performance {
     width: 50px;
     height: 38px;
+  }
+
+  &-features-odoo {
+    width: 55px;
+    height: 55px;
+
+    @media (max-width: $phones) {
+      width: 30px;
+      height: 30px;
+    }
   }
 }
 
@@ -423,10 +442,18 @@ a {
 //
 .resize-img {
   width: 70vw;
+
+  //
+  &-banar {
+    @media (min-width: $desktops) {
+      width: 30vw;
+    }
+  }
 }
 
 .object-fit-cover {
   height: 100%;
+  width: 100%;
   object-fit: cover;
 }
 
@@ -515,7 +542,23 @@ a {
 .margin-title-section {
   margin: 90px 0;
 
+  //
   @media (max-width: $phones) {
-    margin: 35px 0 20px 0;
+    margin: 35px 0 30px 0;
+  }
+}
+
+.remove-bg-hover {
+  //
+  &:hover {
+    background-color: transparent !important;
+  }
+}
+
+//
+.width-75 {
+  //
+  @media (min-width: $desktops) {
+    width: 75%;
   }
 }
