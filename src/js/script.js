@@ -87,7 +87,22 @@ const animObServer = new IntersectionObserver((entries, animObServer) => {
       //
       if (target.dataset.anim === "slideUp")
         target.classList.add("anim__slideUp");
-      // console.log("testing");
+
+      //
+      if (target.dataset.anim === "slideLeft")
+        target.classList.add("anim__slideLeft");
+
+      //
+      if (target.dataset.anim === "slideRight")
+        target.classList.add("anim__slideRight");
+
+      //
+      if (target.dataset.anim === "slideUp3D")
+        target.classList.add("anim__slideUp3D");
+
+      //
+      if (target.dataset.anim === "slideDown")
+        target.classList.add("anim__slideDown");
 
       // Not trigger action again
       animObServer.unobserve(target);

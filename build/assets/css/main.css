@@ -789,9 +789,93 @@ textarea.form-control {
     transform: translateY(0);
     opacity: 1; } }
 
+@-webkit-keyframes slideDown {
+  from {
+    transform: translateY(-50px);
+    opacity: 0; }
+  to {
+    transform: translateY(0);
+    opacity: 1; } }
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-50px);
+    opacity: 0; }
+  to {
+    transform: translateY(0);
+    opacity: 1; } }
+
+@-webkit-keyframes slideLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0; }
+  to {
+    transform: translateX(0%);
+    opacity: 1; } }
+
+@keyframes slideLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0; }
+  to {
+    transform: translateX(0%);
+    opacity: 1; } }
+
+@-webkit-keyframes slideRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0; }
+  to {
+    transform: translateX(0%);
+    opacity: 1; } }
+
+@keyframes slideRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0; }
+  to {
+    transform: translateX(0%);
+    opacity: 1; } }
+
+@-webkit-keyframes slideUp3D {
+  from {
+    transform: perspective(1000px) rotateX(90deg);
+    opacity: 0; }
+  to {
+    transform: perspective(1000px) rotateX(0deg);
+    opacity: 1; } }
+
+@keyframes slideUp3D {
+  from {
+    transform: perspective(1000px) rotateX(90deg);
+    opacity: 0; }
+  to {
+    transform: perspective(1000px) rotateX(0deg);
+    opacity: 1; } }
+
 .anim__slideUp {
   -webkit-animation: slideUp 1s ease both;
           animation: slideUp 1s ease both;
+  will-change: animation; }
+
+.anim__slideUp3D {
+  -webkit-animation: slideUp3D 1s ease both;
+          animation: slideUp3D 1s ease both;
+  will-change: animation; }
+
+.anim__slideDown {
+  -webkit-animation: slideDown 1s ease both;
+          animation: slideDown 1s ease both;
+  will-change: animation; }
+
+.anim__slideLeft {
+  -webkit-animation: slideLeft 1s ease both;
+          animation: slideLeft 1s ease both;
+  will-change: animation; }
+
+.anim__slideRight {
+  -webkit-animation: slideRight 1s ease both;
+          animation: slideRight 1s ease both;
   will-change: animation; }
 
 .accordion-button::after {

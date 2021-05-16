@@ -10,11 +10,80 @@
   }
 }
 
+// SLIDE DOWN
+@keyframes slideDown {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+// SLIDE LEFT
+@keyframes slideLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+// SLIDE RIGHT
+@keyframes slideRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+// SLIDE UP 3D
+@keyframes slideUp3D {
+  from {
+    transform: perspective(1000px) rotateX(90deg);
+    opacity: 0;
+  }
+  to {
+    transform: perspective(1000px) rotateX(0deg);
+    opacity: 1;
+  }
+}
+
 //
 .anim {
   //
   &__slideUp {
     animation: slideUp 1s ease both;
+    will-change: animation;
+  }
+
+  //
+  &__slideUp3D {
+    animation: slideUp3D 1s ease both;
+    will-change: animation;
+  }
+
+  //
+  &__slideDown {
+    animation: slideDown 1s ease both;
+    will-change: animation;
+  }
+
+  //
+  &__slideLeft {
+    animation: slideLeft 1s ease both;
+    will-change: animation;
+  }
+
+  &__slideRight {
+    animation: slideRight 1s ease both;
     will-change: animation;
   }
 }

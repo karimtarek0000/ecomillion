@@ -7,9 +7,15 @@
   <div class="container h-100">
     <!--  -->
     <div
-      class="row g-0 align-items-center justify-content-center justify-content-lg-between h-100"
+      class="
+        row
+        g-0
+        align-items-center
+        justify-content-center justify-content-lg-between
+        h-100
+      "
     >
-      <div class="col-lg-6" role="info">
+      <div class="col-lg-6 opacity-0" data-anim="slideRight" role="info">
         <h1 role="head-title" class="f50 is-accent my-4 my-lg-5">
           برنامج إداره شئون الموظفين
         </h1>
@@ -46,7 +52,11 @@
         </form>
       </div>
       <!--  -->
-      <figure class="col-8 col-md-6 my-3 col-lg-5 text-center" role="image">
+      <figure
+        class="col-8 col-md-6 my-3 col-lg-5 text-center opacity-0"
+        data-anim="slideLeft"
+        role="image"
+      >
         <img class="img-fluid" src="@@webRoot/assets/img/shoon.png" alt="" />
       </figure>
     </div>
@@ -64,7 +74,7 @@
       </h2>
     </div>
     <!--  -->
-    <div class="sec-content">
+    <div class="sec-content opacity-0" data-anim="slideUp">
       <div class="row justify-content-center">
         @@for (var item = 0; item < employees.features.length; item++){
         <div class="col-sm-6 col-lg-4 mt-4 mt-md-5">
@@ -98,7 +108,10 @@
 <section class="bg-grey-light" id="banar-report">
   <div class="container">
     <!--  -->
-    <div class="row g-0 padding-section align-items-center">
+    <div
+      class="row g-0 padding-section align-items-center opacity-0"
+      data-anim="slideUp3D"
+    >
       <!--  -->
       <div class="col">
         <h2 role="head" class="f40 mb-3">تقارير تفصيلية عن الموظفين والأداء</h2>
@@ -136,11 +149,16 @@
       </h2>
     </div>
     <!--  -->
-    <div class="row">
+    <div class="row opacity-0" data-anim="slideDown">
       @@for(var item = 0; item < employees.featuresOdoo.length; item++) {
       <!--  -->
       <div
-        class="col-md-6 col-lg-4 mb-5 d-flex align-items-center align-items-md-start"
+        class="
+          col-md-6 col-lg-4
+          mb-5
+          d-flex
+          align-items-center align-items-md-start
+        "
       >
         <svg class="resize-svg-features-odoo mx-3 flex-shrink-0">
           <use
@@ -162,10 +180,15 @@
   <div class="container">
     <!--  -->
     <div
-      class="row g-0 align-content-center align-items-center start-company__inner"
+      class="
+        row
+        g-0
+        align-content-center align-items-center
+        start-company__inner
+      "
     >
       <!--  -->
-      <div class="col-lg p-2 p-lg-5">
+      <div class="col-lg p-2 p-lg-5 opacity-0" data-anim="slideUp">
         <h2 role="head" class="f40 mb-3 mb-lg-5 is-accent">
           إبدأ الآن فى ادارة شركتك بأحترافية
         </h2>
@@ -174,7 +197,10 @@
           مستويات الاحترافية في إدارة البيزنس الخاص بك
         </p>
       </div>
-      <div class="col-lg text-center mt-3 mt-lg-0">
+      <div
+        class="col-lg text-center mt-3 mt-lg-0 opacity-0"
+        data-anim="slideDown"
+      >
         <a role="link" class="btn yellowish px-4" href="#">
           <img class="ms-2" src="@@webRoot/assets/img/send.svg" alt="" />
           <span class="align-middle">أطلب البرنامج الأن</span>
