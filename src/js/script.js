@@ -63,3 +63,37 @@ $("#file").change(function () {
   let file = $(this)[0].files[0];
   $(this).siblings(".overlay").find("label").text(file.name);
 });
+
+/////////////////////////////////
+// Animation
+
+//
+const allDataAnim = $("[data-anim]");
+
+//
+const options = {
+  root: null,
+  rootMargin: "0px 0px -50% 0px",
+};
+
+//
+const animObServer = new IntersectionObserver((entries, animObServer) => {
+  $(entries).each((i, cur) => {
+    //
+    const target = cur.target;
+
+    // If element inter view port will run all actions
+    if (cur.isIntersecting) {
+      //
+      if (target.dataset.anim === "slideUp")
+        target.classList.add("anim__slideUp");
+      // console.log("testing");
+
+      // Not trigger action again
+      animObServer.unobserve(target);
+    }
+  });
+}, options);
+
+// Run Intersectionobserver
+allDataAnim.each((i, cur) => animObServer.observe(cur));

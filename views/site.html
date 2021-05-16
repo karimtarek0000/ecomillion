@@ -6,7 +6,7 @@
   <!--  -->
   <div class="container h-100">
     <!--  -->
-    <div class="row align-items-center h-100">
+    <div class="row align-items-center h-100 opacity-0" data-anim="slideUp">
       <!--  -->
       <div class="header__info col text-center">
         <!--  -->
@@ -41,13 +41,19 @@
       </h2>
     </div>
     <!--  -->
-    <div class="row">
+    <div class="row opacity-0" data-anim="slideUp">
       <!--  -->
       <div class="offers__category">
         <div class="row justify-content-between g-0">
           <!--  -->
           <div
-            class="offers__category__card flex-basis-offers mb-3 mb-lg-0 shadows flex-grow-0"
+            class="
+              offers__category__card
+              flex-basis-offers
+              mb-3 mb-lg-0
+              shadows
+              flex-grow-0
+            "
           >
             <!--  -->
             <div>
@@ -57,7 +63,14 @@
               </p>
               <!--  -->
               <p
-                class="offers__category__card__price text-center px-3 py-2 f30 fBold"
+                class="
+                  offers__category__card__price
+                  text-center
+                  px-3
+                  py-2
+                  f30
+                  fBold
+                "
               >
                 <span>1999</span>
                 <span class="f16">ريال</span>
@@ -100,7 +113,13 @@
           </div>
           <!--  -->
           <div
-            class="offers__category__card flex-basis-offers mb-3 mb-lg-0 shadows flex-grow-0"
+            class="
+              offers__category__card
+              flex-basis-offers
+              mb-3 mb-lg-0
+              shadows
+              flex-grow-0
+            "
           >
             <!--  -->
             <div>
@@ -110,7 +129,14 @@
               </p>
               <!--  -->
               <p
-                class="offers__category__card__price text-center px-3 py-2 f30 fBold"
+                class="
+                  offers__category__card__price
+                  text-center
+                  px-3
+                  py-2
+                  f30
+                  fBold
+                "
               >
                 <span>3499</span>
                 <span class="f16">ريال</span>
@@ -153,7 +179,13 @@
           </div>
           <!--  -->
           <div
-            class="offers__category__card flex-basis-offers mb-3 mb-lg-0 shadows flex-grow-0"
+            class="
+              offers__category__card
+              flex-basis-offers
+              mb-3 mb-lg-0
+              shadows
+              flex-grow-0
+            "
           >
             <!--  -->
             <div>
@@ -163,7 +195,14 @@
               </p>
               <!--  -->
               <p
-                class="offers__category__card__price text-center px-3 py-2 f30 fBold"
+                class="
+                  offers__category__card__price
+                  text-center
+                  px-3
+                  py-2
+                  f30
+                  fBold
+                "
               >
                 <span>5199</span>
                 <span class="f16">ريال</span>
@@ -206,7 +245,13 @@
           </div>
           <!--  -->
           <div
-            class="offers__category__card flex-basis-offers mb-3 mb-lg-0 shadows flex-grow-0"
+            class="
+              offers__category__card
+              flex-basis-offers
+              mb-3 mb-lg-0
+              shadows
+              flex-grow-0
+            "
           >
             <!--  -->
             <div>
@@ -216,7 +261,14 @@
               </p>
               <!--  -->
               <p
-                class="offers__category__card__price text-center px-3 py-2 f30 fBold"
+                class="
+                  offers__category__card__price
+                  text-center
+                  px-3
+                  py-2
+                  f30
+                  fBold
+                "
               >
                 حسب الطلب
               </p>
@@ -273,10 +325,10 @@
       </h2>
     </div>
     <!--  -->
-    <div class="sec-content">
+    <div class="sec-content opacity-0" data-anim="slideUp">
       <div class="row justify-content-center">
         @@for (var item = 0; item < tools.length; item++){
-        <div class="col-6 col-md-4 mt-4 mt-md-5">
+        <div class="col-sm-6 col-lg-4 mt-4 mt-md-5">
           <div class="card-item text-center">
             <figure class="mx-auto">
               <img src=@@webRoot/assets/img/`+tools[item].img+` alt="">

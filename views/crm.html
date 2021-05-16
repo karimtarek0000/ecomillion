@@ -7,7 +7,13 @@
   <div class="container h-100">
     <!--  -->
     <div
-      class="row g-0 align-items-center justify-content-center justify-content-lg-between h-100"
+      class="
+        row
+        g-0
+        align-items-center
+        justify-content-center justify-content-lg-between
+        h-100
+      "
     >
       <div class="col-lg-6" role="info">
         <h1 role="head-title" class="f50 is-accent my-4 my-lg-5">
@@ -114,7 +120,15 @@
             <!--  -->
             <div
               role="svg"
-              class="col ms-3 flex-grow-0 flex-shrink-0 bg-white shadows py-2 rounded"
+              class="
+                col
+                ms-3
+                flex-grow-0 flex-shrink-0
+                bg-white
+                shadows
+                py-2
+                rounded
+              "
             >
               <svg class="resize-svg-forecasts">
                 <use
@@ -145,7 +159,10 @@
         <p role="subtitle" class="f16 card-desc is-dimmed ps-5 lh-lg">
           هنالك العديد من الأنواع المتوفرة لنصوص لوريم إيبسوم
         </p>
-        <p role="paragraph" class="f16 card-desc is-dimmed ps-5 lh-lg mt-5">
+        <p
+          role="paragraph"
+          class="f16 card-desc is-dimmed ps-5 lh-lg mt-3 mt-lg-5"
+        >
           هنالك العديد من الأنواع المتوفرة لنصوص لوريم إيبسوم، ولكن الغالبية تم
           تعديلها بشكل ما عبر إدخال بعض النوادر أو الكلمات العشوائية إلى النص.
           إن كنت تريد أن تستخدم نص لوريم إيبسوم ما، عليك أن تتحقق أولاً أن ليس
@@ -153,12 +170,25 @@
         </p>
         <!--  -->
         <div
-          class="row mt-5 g-0 performance__steps is-primary justify-content-between"
+          class="
+            row
+            mt-5
+            g-0
+            performance__steps
+            is-primary
+            justify-content-between
+          "
         >
           @@for(var item = 0; item < crm.performance.length; item++) {
           <!--  -->
           <div
-            class="flex-basis-performance mb-3 mb-md-0 d-flex flex-column align-items-center"
+            class="
+              flex-basis-performance
+              mb-3 mb-md-0
+              d-flex
+              flex-column
+              align-items-center
+            "
           >
             <!--  -->
             <div class="text-center mb-3">
@@ -170,7 +200,7 @@
               </p>
             </div>
             <!--  -->
-            <div role="svg" class="col flex-grow-0 bg-white shadows border p-4">
+            <div role="svg" class="flex-grow-0 bg-white shadows border p-4">
               <svg class="resize-svg-performance svg-fill-blueish">
                 <use
                 xlink:href=@@webRoot/assets/img/sprite.svg#icon-`+crm.performance[item].icon+`
@@ -184,7 +214,10 @@
       </div>
 
       <!--  -->
-      <figure class="col-lg-5 mt-3 mt-lg-0 text-center" role="image">
+      <figure
+        class="col-lg-5 mt-3 flex-grow-0 mt-lg-0 text-center"
+        role="image"
+      >
         <img
           class="img-fluid resize-img"
           src="@@webRoot/assets/img/crm/1.png"
@@ -298,7 +331,15 @@
       @@for(var item = 0; item < crm.property.length; item++) {
       <!--  -->
       <div
-        class="flex-basis-app d-flex mb-3 align-items-center py-3 shadows-app bg-white"
+        class="
+          flex-basis-app
+          d-flex
+          mb-3
+          align-items-center
+          py-3
+          shadows-app
+          bg-white
+        "
       >
         <i class="fas fa-check is-accent f30 mx-3"></i>
         <p>`+crm.property[item].desc+`</p>

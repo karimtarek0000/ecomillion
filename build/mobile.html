@@ -25,58 +25,71 @@
 
   <body>
     <!-- start header-->
-    <header><!-- Main navigation -->
+    <!-- Main navigation -->
 <nav class="navbar navbar-expand-lg navbar-dark">
-    <div class="container">
+  <!--  -->
+  <div class="container">
+    <!--  -->
+    <div class="d-flex align-items-center">
+      <!--  -->
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#main-nav"
+        aria-controls="main-nav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon ms-3"></span>
+      </button>
 
-        <div class="d-flex align-items-center">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon ms-3"></span>
-            </button>
-            
-            <a class="navbar-brand" href="./index.html">
-                <img src="./assets/img/logo.png" alt="Website Logo">
-            </a>
-        </div>
-
-    
-        <section class="collapse navbar-collapse order-3 order-lg-0 mt-4 mt-lg-0" id="main-nav">
-            <ul class="navbar-nav mx-auto">
-                <li class="nav-item active">
-                    <a class="nav-link px-3 px-lg-2" href="./">الرئيسية</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link px-3 px-lg-2" href="./">عن الشركة</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link px-3 px-lg-2" href="./">CRM</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link px-3 px-lg-2" href="./">ERP</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link px-3 px-lg-2" href="./">خدمات الشركة</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link px-3 px-lg-2" href="./">أعمالنا</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link px-3 px-lg-2" href="./">المدونة</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link px-3 px-lg-2" href="./">تواصل معنا</a>
-                </li>
-            </ul>
-        </section>
-
-        <section class="d-flex align-items-center">
-            <nav class="nav btns-nav">
-                <a class="btn yellowish nav-link active" href="#">تذكرة جديدة</a>
-                <a class="btn yellowish outline nav-link" href="#">EN</a>
-            </nav>            
-        </section>
+      <a class="navbar-brand" href="./index.html">
+        <img src="./assets/img/logo.png" alt="Website Logo" />
+      </a>
     </div>
-</nav></header>
+
+    <section
+      class="collapse navbar-collapse order-3 order-lg-0 mt-4 mt-lg-0"
+      id="main-nav"
+    >
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item active">
+          <a class="nav-link px-3 px-lg-2" href="./">الرئيسية</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link px-3 px-lg-2" href="./">عن الشركة</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link px-3 px-lg-2" href="./">CRM</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link px-3 px-lg-2" href="./">ERP</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link px-3 px-lg-2" href="./">خدمات الشركة</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link px-3 px-lg-2" href="./">أعمالنا</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link px-3 px-lg-2" href="./">المدونة</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link px-3 px-lg-2" href="./">تواصل معنا</a>
+        </li>
+      </ul>
+    </section>
+
+    <section class="d-flex align-items-center">
+      <nav class="nav btns-nav">
+        <a class="btn yellowish nav-link active" href="#">تذكرة جديدة</a>
+        <a class="btn yellowish outline nav-link" href="#">EN</a>
+      </nav>
+    </section>
+  </div>
+</nav>
+
 
     <main role="main" id="mobile"></main>
   </body>
@@ -88,7 +101,7 @@
   <!--  -->
   <div class="container h-100">
     <!--  -->
-    <div class="row align-items-center h-100">
+    <div class="row align-items-center h-100 opacity-0" data-anim="slideUp">
       <!--  -->
       <div class="header__info col text-center">
         <!--  -->
@@ -125,7 +138,15 @@
       
       <!--  -->
       <div
-        class="flex-basis-app d-flex mb-3 align-items-center py-3 shadows-app bg-white"
+        class="
+          flex-basis-app
+          d-flex
+          mb-3
+          align-items-center
+          py-3
+          shadows-app
+          bg-white
+        "
       >
         <i class="fas fa-check is-accent f30 mx-3"></i>
         <p>ايجاد الفكرة المناسبة للتطبيق او تطوير وتحسين الفكرة التي لديك</p>
@@ -133,7 +154,15 @@
       
       <!--  -->
       <div
-        class="flex-basis-app d-flex mb-3 align-items-center py-3 shadows-app bg-white"
+        class="
+          flex-basis-app
+          d-flex
+          mb-3
+          align-items-center
+          py-3
+          shadows-app
+          bg-white
+        "
       >
         <i class="fas fa-check is-accent f30 mx-3"></i>
         <p>اعتماد وحجز اسم التطبيق وتصميم الشعار الخاص به</p>
@@ -141,7 +170,15 @@
       
       <!--  -->
       <div
-        class="flex-basis-app d-flex mb-3 align-items-center py-3 shadows-app bg-white"
+        class="
+          flex-basis-app
+          d-flex
+          mb-3
+          align-items-center
+          py-3
+          shadows-app
+          bg-white
+        "
       >
         <i class="fas fa-check is-accent f30 mx-3"></i>
         <p>دراسة الفكرة والتاكد من جدوى عملها في السوق المطلوب</p>
@@ -149,7 +186,15 @@
       
       <!--  -->
       <div
-        class="flex-basis-app d-flex mb-3 align-items-center py-3 shadows-app bg-white"
+        class="
+          flex-basis-app
+          d-flex
+          mb-3
+          align-items-center
+          py-3
+          shadows-app
+          bg-white
+        "
       >
         <i class="fas fa-check is-accent f30 mx-3"></i>
         <p>بحث ودراسة مميزات وصفحات وشاشات التطبيق وكيف تعمل مع عمل WireFraming</p>
@@ -157,7 +202,15 @@
       
       <!--  -->
       <div
-        class="flex-basis-app d-flex mb-3 align-items-center py-3 shadows-app bg-white"
+        class="
+          flex-basis-app
+          d-flex
+          mb-3
+          align-items-center
+          py-3
+          shadows-app
+          bg-white
+        "
       >
         <i class="fas fa-check is-accent f30 mx-3"></i>
         <p>تصميم صفحات التطبيق بشكل احترافي ومناسب</p>
@@ -165,7 +218,15 @@
       
       <!--  -->
       <div
-        class="flex-basis-app d-flex mb-3 align-items-center py-3 shadows-app bg-white"
+        class="
+          flex-basis-app
+          d-flex
+          mb-3
+          align-items-center
+          py-3
+          shadows-app
+          bg-white
+        "
       >
         <i class="fas fa-check is-accent f30 mx-3"></i>
         <p>عمل ملف كامل بجميع مايتعلق ب التطبيق وتفاصيله ويمكن عرضه على المستثمرين</p>
@@ -173,7 +234,15 @@
       
       <!--  -->
       <div
-        class="flex-basis-app d-flex mb-3 align-items-center py-3 shadows-app bg-white"
+        class="
+          flex-basis-app
+          d-flex
+          mb-3
+          align-items-center
+          py-3
+          shadows-app
+          bg-white
+        "
       >
         <i class="fas fa-check is-accent f30 mx-3"></i>
         <p>برمجة التطبيق بأحدث اللغات البرمجية التي تحقق أسرع اداء وأعلى استقرار</p>
@@ -181,7 +250,15 @@
       
       <!--  -->
       <div
-        class="flex-basis-app d-flex mb-3 align-items-center py-3 shadows-app bg-white"
+        class="
+          flex-basis-app
+          d-flex
+          mb-3
+          align-items-center
+          py-3
+          shadows-app
+          bg-white
+        "
       >
         <i class="fas fa-check is-accent f30 mx-3"></i>
         <p>توفير سيرفر خاص بالمواصفات المناسبة لحجم التطبيق</p>
@@ -189,7 +266,15 @@
       
       <!--  -->
       <div
-        class="flex-basis-app d-flex mb-3 align-items-center py-3 shadows-app bg-white"
+        class="
+          flex-basis-app
+          d-flex
+          mb-3
+          align-items-center
+          py-3
+          shadows-app
+          bg-white
+        "
       >
         <i class="fas fa-check is-accent f30 mx-3"></i>
         <p>رفع التطبيق على منصة ابستور و بلاي ستور</p>
@@ -197,7 +282,15 @@
       
       <!--  -->
       <div
-        class="flex-basis-app d-flex mb-3 align-items-center py-3 shadows-app bg-white"
+        class="
+          flex-basis-app
+          d-flex
+          mb-3
+          align-items-center
+          py-3
+          shadows-app
+          bg-white
+        "
       >
         <i class="fas fa-check is-accent f30 mx-3"></i>
         <p>الدعم الفني الحقيقي والمتواصل باستمرار بعد رفع ونشر التطبيق</p>
@@ -453,10 +546,10 @@
       </h2>
     </div>
     <!--  -->
-    <div class="sec-content">
+    <div class="sec-content opacity-0" data-anim="slideUp">
       <div class="row justify-content-center">
         
-        <div class="col-6 col-md-4 mt-4 mt-md-5">
+        <div class="col-sm-6 col-lg-4 mt-4 mt-md-5">
           <div class="card-item text-center">
             <figure class="mx-auto">
               <img src=./assets/img/crm.svg alt="">
@@ -466,7 +559,7 @@
           </div>
         </div>
         
-        <div class="col-6 col-md-4 mt-4 mt-md-5">
+        <div class="col-sm-6 col-lg-4 mt-4 mt-md-5">
           <div class="card-item text-center">
             <figure class="mx-auto">
               <img src=./assets/img/mobile-phone.svg alt="">
@@ -476,7 +569,7 @@
           </div>
         </div>
         
-        <div class="col-6 col-md-4 mt-4 mt-md-5">
+        <div class="col-sm-6 col-lg-4 mt-4 mt-md-5">
           <div class="card-item text-center">
             <figure class="mx-auto">
               <img src=./assets/img/device.svg alt="">
@@ -486,7 +579,7 @@
           </div>
         </div>
         
-        <div class="col-6 col-md-4 mt-4 mt-md-5">
+        <div class="col-sm-6 col-lg-4 mt-4 mt-md-5">
           <div class="card-item text-center">
             <figure class="mx-auto">
               <img src=./assets/img/marketing.svg alt="">
@@ -496,7 +589,7 @@
           </div>
         </div>
         
-        <div class="col-6 col-md-4 mt-4 mt-md-5">
+        <div class="col-sm-6 col-lg-4 mt-4 mt-md-5">
           <div class="card-item text-center">
             <figure class="mx-auto">
               <img src=./assets/img/vector.svg alt="">
@@ -506,7 +599,7 @@
           </div>
         </div>
         
-        <div class="col-6 col-md-4 mt-4 mt-md-5">
+        <div class="col-sm-6 col-lg-4 mt-4 mt-md-5">
           <div class="card-item text-center">
             <figure class="mx-auto">
               <img src=./assets/img/hosting.svg alt="">
@@ -516,7 +609,7 @@
           </div>
         </div>
         
-        <div class="col-6 col-md-4 mt-4 mt-md-5">
+        <div class="col-sm-6 col-lg-4 mt-4 mt-md-5">
           <div class="card-item text-center">
             <figure class="mx-auto">
               <img src=./assets/img/seo.svg alt="">
@@ -526,7 +619,7 @@
           </div>
         </div>
         
-        <div class="col-6 col-md-4 mt-4 mt-md-5">
+        <div class="col-sm-6 col-lg-4 mt-4 mt-md-5">
           <div class="card-item text-center">
             <figure class="mx-auto">
               <img src=./assets/img/writing.svg alt="">
@@ -536,7 +629,7 @@
           </div>
         </div>
         
-        <div class="col-6 col-md-4 mt-4 mt-md-5">
+        <div class="col-sm-6 col-lg-4 mt-4 mt-md-5">
           <div class="card-item text-center">
             <figure class="mx-auto">
               <img src=./assets/img/social-media.svg alt="">

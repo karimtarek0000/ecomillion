@@ -46,11 +46,8 @@ $black: #000000;
   position: relative;
   background-image: url("../img/" + $imgUrl);
   background-repeat: no-repeat;
-  background-size: auto;
-  background-position: center;
-  @media (min-width: $phones) {
-    background-position: left;
-  }
+  background-size: cover;
+  background-position: left;
 }
 
 @mixin overlay($color) {

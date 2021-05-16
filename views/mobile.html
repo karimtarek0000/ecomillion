@@ -6,7 +6,7 @@
   <!--  -->
   <div class="container h-100">
     <!--  -->
-    <div class="row align-items-center h-100">
+    <div class="row align-items-center h-100 opacity-0" data-anim="slideUp">
       <!--  -->
       <div class="header__info col text-center">
         <!--  -->
@@ -43,7 +43,15 @@
       @@for(var item = 0; item < mobile.fetures.length; item++) {
       <!--  -->
       <div
-        class="flex-basis-app d-flex mb-3 align-items-center py-3 shadows-app bg-white"
+        class="
+          flex-basis-app
+          d-flex
+          mb-3
+          align-items-center
+          py-3
+          shadows-app
+          bg-white
+        "
       >
         <i class="fas fa-check is-accent f30 mx-3"></i>
         <p>`+mobile.fetures[item].desc+`</p>
@@ -66,10 +74,10 @@
       </h2>
     </div>
     <!--  -->
-    <div class="sec-content">
+    <div class="sec-content opacity-0" data-anim="slideUp">
       <div class="row justify-content-center">
         @@for (var item = 0; item < tools.length; item++){
-        <div class="col-6 col-md-4 mt-4 mt-md-5">
+        <div class="col-sm-6 col-lg-4 mt-4 mt-md-5">
           <div class="card-item text-center">
             <figure class="mx-auto">
               <img src=@@webRoot/assets/img/`+tools[item].img+` alt="">

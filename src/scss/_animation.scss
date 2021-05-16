@@ -9,3 +9,12 @@
     opacity: 1;
   }
 }
+
+//
+.anim {
+  //
+  &__slideUp {
+    animation: slideUp 1s ease both;
+    will-change: animation;
+  }
+}

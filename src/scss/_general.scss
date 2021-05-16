@@ -275,19 +275,6 @@ a {
   }
 }
 
-/* ========== Style Sharing ========== */
-//
-.header {
-  height: 90vh;
-  @include bg-base("future/header.jpg");
-
-  //
-  &__info {
-    animation: slideUp 1s 0.5s ease-in-out both;
-    will-change: animation;
-  }
-}
-
 /* ========== Style Sections ========== */
 //
 .offers {
@@ -343,7 +330,7 @@ a {
       transform: translate(-50%, -50%);
 
       //
-      @media (max-width: $phones) {
+      @media (max-width: 442px) {
         display: none;
       }
     }
@@ -535,10 +522,14 @@ a {
 
   //
   &-performance {
-    flex-basis: 100px; //
-    @media (max-width: $phones) {
+    flex-basis: 100px;
+    //
+    @media (max-width: 442px) {
       flex-basis: calc(98% / 2);
     }
+    // @media (max-width: $phones) {
+    //   flex-basis: calc(98% / 2);
+    // }
   }
 }
 
@@ -582,4 +573,8 @@ a {
   @media (min-width: $desktops) {
     width: 95%;
   }
+}
+
+.opacity-0 {
+  opacity: 0;
 }

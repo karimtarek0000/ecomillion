@@ -25,66 +25,79 @@
 
   <body>
     <!-- start header-->
-    <header><!-- Main navigation -->
+    <!-- Main navigation -->
 <nav class="navbar navbar-expand-lg navbar-dark">
-    <div class="container">
+  <!--  -->
+  <div class="container">
+    <!--  -->
+    <div class="d-flex align-items-center">
+      <!--  -->
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#main-nav"
+        aria-controls="main-nav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon ms-3"></span>
+      </button>
 
-        <div class="d-flex align-items-center">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon ms-3"></span>
-            </button>
-            
-            <a class="navbar-brand" href="./index.html">
-                <img src="./assets/img/logo.png" alt="Website Logo">
-            </a>
-        </div>
-
-    
-        <section class="collapse navbar-collapse order-3 order-lg-0 mt-4 mt-lg-0" id="main-nav">
-            <ul class="navbar-nav mx-auto">
-                <li class="nav-item active">
-                    <a class="nav-link px-3 px-lg-2" href="./">الرئيسية</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link px-3 px-lg-2" href="./">عن الشركة</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link px-3 px-lg-2" href="./">CRM</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link px-3 px-lg-2" href="./">ERP</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link px-3 px-lg-2" href="./">خدمات الشركة</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link px-3 px-lg-2" href="./">أعمالنا</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link px-3 px-lg-2" href="./">المدونة</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link px-3 px-lg-2" href="./">تواصل معنا</a>
-                </li>
-            </ul>
-        </section>
-
-        <section class="d-flex align-items-center">
-            <nav class="nav btns-nav">
-                <a class="btn yellowish nav-link active" href="#">تذكرة جديدة</a>
-                <a class="btn yellowish outline nav-link" href="#">EN</a>
-            </nav>            
-        </section>
+      <a class="navbar-brand" href="./index.html">
+        <img src="./assets/img/logo.png" alt="Website Logo" />
+      </a>
     </div>
-</nav></header>
+
+    <section
+      class="collapse navbar-collapse order-3 order-lg-0 mt-4 mt-lg-0"
+      id="main-nav"
+    >
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item active">
+          <a class="nav-link px-3 px-lg-2" href="./">الرئيسية</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link px-3 px-lg-2" href="./">عن الشركة</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link px-3 px-lg-2" href="./">CRM</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link px-3 px-lg-2" href="./">ERP</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link px-3 px-lg-2" href="./">خدمات الشركة</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link px-3 px-lg-2" href="./">أعمالنا</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link px-3 px-lg-2" href="./">المدونة</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link px-3 px-lg-2" href="./">تواصل معنا</a>
+        </li>
+      </ul>
+    </section>
+
+    <section class="d-flex align-items-center">
+      <nav class="nav btns-nav">
+        <a class="btn yellowish nav-link active" href="#">تذكرة جديدة</a>
+        <a class="btn yellowish outline nav-link" href="#">EN</a>
+      </nav>
+    </section>
+  </div>
+</nav>
+
 
     <main role="main" id="home"></main>
   </body>
 </html>
 
 
-<section>
-    <div id="mainSlider" class="carousel py-sm-5 pt-md-4 pb-md-0 slide carousel-fade" data-bs-ride="carousel">
+<section class="overflow-hidden">
+    <div id="mainSlider" class="carousel py-sm-5 pt-md-4 pb-md-0 slide carousel-fade d-lg-flex align-items-lg-center" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
                 <div class="container">
@@ -134,7 +147,7 @@
 </section>
 
 <!-- About section -->
-<section class="sec-block" id="about">
+<section class="sec-block overflow-hidden" id="about">
     <div class="container">
         <div class="sec-head text-center">
             <h2 class="title">عن الشركة</h2>
@@ -176,7 +189,7 @@
 </section>
 
 <!-- Success techniques section -->
-<section class="sec-block" id="crm">
+<section class="sec-block overflow-hidden" id="crm">
     <div class="container">
         <div class="sec-head text-center">
             <h2 class="title">برنامج إدارة علاقات العملاء</h2>
@@ -225,7 +238,7 @@
 </section>
 
 <!-- status section -->
-<section class="sec-block mt-5 pt-5" id="stats">
+<section class="sec-block mt-5 pt-5 overflow-hidden" id="stats">
     <div class="container">
         <div class="sec-head text-center">
             <h2 class="title">من خلاله ستحصل على</h2>
@@ -273,63 +286,63 @@
         </div>
         <div class="sec-content">
             <div class="row justify-content-center">
-                 <div class="col-6 col-md-4 mt-4 mt-md-5">
+                 <div class="col-sm-6 col-lg-4 mt-4 mt-md-5">
                     <div class="card-item text-center">
                         <figure class="mx-auto"><img src=./assets/img/crm.svg alt=""></figure>
                         <h4 class="card-name mb-3 mb-md-4 f25">CRM</h4>
                         <p class="card-desc is-dimmed">تتخصص شركة ECOMILLION في (CRM (ODOO لتحسني قدرة الشركات على الإستجابة لعملائها والأحداث الهامة</p>
                     </div>
             </div>
-             <div class="col-6 col-md-4 mt-4 mt-md-5">
+             <div class="col-sm-6 col-lg-4 mt-4 mt-md-5">
                     <div class="card-item text-center">
                         <figure class="mx-auto"><img src=./assets/img/mobile-phone.svg alt=""></figure>
                         <h4 class="card-name mb-3 mb-md-4 f25">تطبيقات الجوال</h4>
                         <p class="card-desc is-dimmed">يميكنك الحصول على تطبيق للموقع الإلكتروني على جميع المنصات في وقت قياسي بمجرد طلبك للتطبيق من شريكنا ابتدي</p>
                     </div>
             </div>
-             <div class="col-6 col-md-4 mt-4 mt-md-5">
+             <div class="col-sm-6 col-lg-4 mt-4 mt-md-5">
                     <div class="card-item text-center">
                         <figure class="mx-auto"><img src=./assets/img/device.svg alt=""></figure>
                         <h4 class="card-name mb-3 mb-md-4 f25">موقع للمستقبل</h4>
                         <p class="card-desc is-dimmed">اعين شريكنا ابتدي دائما على المستقبل لذلك نحرص عىل تصميم موقع الكتروني جاهز للتحديثات المستقبلية والتطورات الحديثة</p>
                     </div>
             </div>
-             <div class="col-6 col-md-4 mt-4 mt-md-5">
+             <div class="col-sm-6 col-lg-4 mt-4 mt-md-5">
                     <div class="card-item text-center">
                         <figure class="mx-auto"><img src=./assets/img/marketing.svg alt=""></figure>
                         <h4 class="card-name mb-3 mb-md-4 f25">التسويق الالكتروني</h4>
                         <p class="card-desc is-dimmed">وقد طورنا الفريق المناسب والتكنولوجيا والإسرتاتيجيات الرقمية للسماح لعمالئنا بالوصول إلى المزيد من العملاء</p>
                     </div>
             </div>
-             <div class="col-6 col-md-4 mt-4 mt-md-5">
+             <div class="col-sm-6 col-lg-4 mt-4 mt-md-5">
                     <div class="card-item text-center">
                         <figure class="mx-auto"><img src=./assets/img/vector.svg alt=""></figure>
                         <h4 class="card-name mb-3 mb-md-4 f25">إبتكار العلامة التجارية</h4>
                         <p class="card-desc is-dimmed">تعد العلامة التجارية وهوية الشركة أهم الخطوات لبدء وتأسيس عملك. سنقوم بترجمة المبادئ الأساسية لشركتك</p>
                     </div>
             </div>
-             <div class="col-6 col-md-4 mt-4 mt-md-5">
+             <div class="col-sm-6 col-lg-4 mt-4 mt-md-5">
                     <div class="card-item text-center">
                         <figure class="mx-auto"><img src=./assets/img/hosting.svg alt=""></figure>
                         <h4 class="card-name mb-3 mb-md-4 f25">إستضافة سريعة</h4>
                         <p class="card-desc is-dimmed">شريكنا ابتدي يجعل استضافة الموقع الإلكتروني ذات كفاءة عالية و أسرع سبعة أضعاف وفقا لمعايير فريق مطورين جوجل القياسية</p>
                     </div>
             </div>
-             <div class="col-6 col-md-4 mt-4 mt-md-5">
+             <div class="col-sm-6 col-lg-4 mt-4 mt-md-5">
                     <div class="card-item text-center">
                         <figure class="mx-auto"><img src=./assets/img/seo.svg alt=""></figure>
                         <h4 class="card-name mb-3 mb-md-4 f25">SEO</h4>
                         <p class="card-desc is-dimmed">البحث هو عملية زيادة جودة وكمية حركة مرور موقع الويب عن طريق زيادة ظهور موقع ويب أو صفحة ويب</p>
                     </div>
             </div>
-             <div class="col-6 col-md-4 mt-4 mt-md-5">
+             <div class="col-sm-6 col-lg-4 mt-4 mt-md-5">
                     <div class="card-item text-center">
                         <figure class="mx-auto"><img src=./assets/img/writing.svg alt=""></figure>
                         <h4 class="card-name mb-3 mb-md-4 f25">التصميم والإنتاج</h4>
                         <p class="card-desc is-dimmed">نعمل على خلق كل ما هو استنايئ وإبداعي والتصميم هو جزء من ذلك. سوف تحظى بتصميم</p>
                     </div>
             </div>
-             <div class="col-6 col-md-4 mt-4 mt-md-5">
+             <div class="col-sm-6 col-lg-4 mt-4 mt-md-5">
                     <div class="card-item text-center">
                         <figure class="mx-auto"><img src=./assets/img/social-media.svg alt=""></figure>
                         <h4 class="card-name mb-3 mb-md-4 f25">موقع للمستقبل</h4>
@@ -344,7 +357,7 @@
 
 
 <!-- works section -->
-<section class="sec-block bg-light-primary" id="works">
+<section class="sec-block bg-light-primary overflow-hidden" id="works">
     <div class="container">
         <div class="sec-head text-center">
             <h2 class="title">أعمال إبتدي</h2>
@@ -482,7 +495,7 @@
 
 
 <!-- Blog section -->
-<section class="sec-block bg-light" id="blog">
+<section class="sec-block bg-light overflow-hidden" id="blog">
     <div class="container">
         <div class="sec-head text-center">
             <h2 class="title">المدونة</h2>
