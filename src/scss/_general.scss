@@ -40,8 +40,8 @@
 }
 
 .fRegular {
-  font-family: "dinRegular";
-  font-weight: normal;
+  font-family: "dinRegular" !important;
+  font-weight: normal !important;
 }
 
 .fBolder {
@@ -49,9 +49,9 @@
   font-weight: 900;
 }
 .f16 {
-  font-size: 14px;
+  font-size: 14px !important;
   @media (min-width: $tablets) {
-    font-size: 16px;
+    font-size: 16px !important;
   }
 }
 
@@ -90,6 +90,16 @@
   }
   @media (min-width: $tablets) {
     font-size: 30px;
+  }
+}
+
+.f35 {
+  font-size: 27px;
+  @media (min-width: $phones) {
+    font-size: 30px;
+  }
+  @media (min-width: $tablets) {
+    font-size: 35px;
   }
 }
 
@@ -356,6 +366,44 @@ a {
   }
 }
 
+//
+.allBusiness__items__outer {
+  //
+  &::after,
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 25px;
+    display: block;
+    z-index: 10;
+
+    @media (min-width: 1400px) {
+      display: none;
+    }
+  }
+
+  //
+  &::after {
+    right: -10px;
+    background-image: linear-gradient(
+      to left,
+      #adb764 30%,
+      rgba(#adb764cf, 0.1)
+    );
+  }
+  //
+  &::before {
+    left: -10px;
+    background-image: linear-gradient(
+      to right,
+      #adb764 30%,
+      rgba(#adb764cf, 0.1)
+    );
+  }
+}
+
 /* ========== Style SVG ========== */
 //
 .resize-svg {
@@ -527,9 +575,15 @@ a {
     @media (max-width: 442px) {
       flex-basis: calc(98% / 2);
     }
-    // @media (max-width: $phones) {
-    //   flex-basis: calc(98% / 2);
-    // }
+  }
+
+  &-gallary {
+    @media (min-width: $tablets) {
+      flex-basis: calc(95% / 2);
+    }
+    @media (min-width: $desktops) {
+      flex-basis: calc(97% / 3);
+    }
   }
 }
 
@@ -561,20 +615,31 @@ a {
 }
 
 //
-.width-75 {
+.width {
   //
-  @media (min-width: $desktops) {
-    width: 75%;
+  &-75 {
+    //
+    @media (min-width: $desktops) {
+      width: 75%;
+    }
   }
-}
 
-.width-95 {
   //
-  @media (min-width: $desktops) {
-    width: 95%;
+  &-95 {
+    @media (min-width: $desktops) {
+      width: 95%;
+    }
+  }
+
+  &-150 {
+    width: 150px;
   }
 }
 
 .opacity-0 {
   opacity: 0;
+}
+
+.max-width {
+  max-width: 100%;
 }

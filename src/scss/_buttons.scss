@@ -51,19 +51,27 @@
       }
     }
   }
+  //
+  &-outline {
+    //
+    &-yellowish {
+      color: color(yellowish);
+      border-color: color(yellowish);
 
-  // &.danger{
-  //     color: color(white);
-  //     border-color: color(danger);
-  //     background-color: color(danger);
-  //     &.outline{
-  //         color: color(danger);
-  //         background-color: color(white);
-  //     }
-  // }
-  // &.light{
-  //     color: color(blueish);
-  //     border-color: color(light);
-  //     background-color: color(white);
-  // }
+      //
+      @media (hover: hover) {
+        &:hover {
+          background-color: color(yellowish);
+          color: color(blueish);
+        }
+      }
+
+      //
+      &--active {
+        background-color: color(yellowish);
+        color: color(blueish);
+        pointer-events: none;
+      }
+    }
+  }
 }

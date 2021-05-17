@@ -56,34 +56,59 @@
   }
 }
 
+@keyframes scale1 {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(0.5);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
 //
 .anim {
+  $setTransition: 1s ease-in-out both;
   //
   &__slideUp {
-    animation: slideUp 1s ease both;
+    animation: slideUp $setTransition;
     will-change: animation;
   }
 
   //
   &__slideUp3D {
-    animation: slideUp3D 1s ease both;
+    animation: slideUp3D $setTransition;
     will-change: animation;
   }
 
   //
   &__slideDown {
-    animation: slideDown 1s ease both;
+    animation: slideDown $setTransition;
     will-change: animation;
   }
 
   //
   &__slideLeft {
-    animation: slideLeft 1s ease both;
+    animation: slideLeft $setTransition;
     will-change: animation;
   }
 
+  //
   &__slideRight {
-    animation: slideRight 1s ease both;
+    animation: slideRight $setTransition;
     will-change: animation;
+  }
+
+  //
+  &-scale1 {
+    //
+    @media (min-width: $tablets) {
+      animation: scale1 0.5s linear forwards;
+    }
   }
 }

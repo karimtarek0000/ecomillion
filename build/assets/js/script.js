@@ -112,3 +112,82 @@ const animObServer = new IntersectionObserver((entries, animObServer) => {
 
 // Run Intersectionobserver
 allDataAnim.each((i, cur) => animObServer.observe(cur));
+
+/////////////////////////////////
+// 1) - Navbar Portfolio - Scroll
+//
+const navbarPortfolio = $("#navbar-portfolio");
+//
+let status = false;
+let startDownX = null;
+let scrollLeft = null;
+
+////////////////////
+// Computer
+function mouseDown(e) {
+  status = true;
+  startDownX = e.pageX - navbarPortfolio.offset().left;
+  scrollLeft = navbarPortfolio.scrollLeft();
+}
+//
+function mouseUpAndLeave() {
+  status = false;
+}
+//
+function mouseMove(e) {
+  if (!status) return; // false stop move action
+  const startMoveX = e.pageX - navbarPortfolio.offset().left;
+  const distance = startMoveX - startDownX;
+  navbarPortfolio.scrollLeft(scrollLeft - distance);
+}
+
+// Other Devices
+function touchStart(e) {
+  status = true;
+  startDownX = e.touches[0].pageX - navbarPortfolio.offset().left;
+  scrollLeft = navbarPortfolio.scrollLeft();
+}
+//
+function touchMove(e) {
+  if (!status) return; // false stop move action
+  const startMoveX = e.touches[0].pageX - navbarPortfolio.offset().left;
+  const distance = startMoveX - startDownX;
+  navbarPortfolio.scrollLeft(scrollLeft - distance);
+}
+
+// Run All Event with on map
+// Computer
+navbarPortfolio.on({
+  mousedown: mouseDown,
+  mouseup: mouseUpAndLeave,
+  mouseleave: mouseUpAndLeave,
+  mousemove: mouseMove,
+  touchstart: touchStart,
+  touchend: mouseUpAndLeave,
+  touchmove: touchMove,
+});
+
+/////////////////////////////////
+// 2) - Portfolio
+$(".allBusiness__items .allBusiness__items__item").on("click", function () {
+  // 1) Get id when click the button
+  const classSelect = $(this).data("select");
+  // 2) Add class active on select button then remove class active from all siblings
+  $(this)
+    .addClass("btn-outline-yellowish--active")
+    .siblings()
+    .removeClass("btn-outline-yellowish--active");
+  // 3) Filter with all children
+  $("#portfolio")
+    .children()
+    .filter((i, cur) => {
+      if ($(cur).hasClass(classSelect)) {
+        //
+        if ($(cur).is(":hidden")) $(cur).removeClass("d-none");
+        //
+        if ($(window).innerWidth() > 768) $(cur).addClass("anim-scale1");
+      } else {
+        $(cur).addClass("d-none");
+      }
+    });
+});

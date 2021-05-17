@@ -144,18 +144,18 @@ img {
   font-family: "dinBold"; }
 
 .fRegular {
-  font-family: "dinRegular";
-  font-weight: normal; }
+  font-family: "dinRegular" !important;
+  font-weight: normal !important; }
 
 .fBolder {
   font-family: "dinHeavy";
   font-weight: 900; }
 
 .f16 {
-  font-size: 14px; }
+  font-size: 14px !important; }
   @media (min-width: 768px) {
     .f16 {
-      font-size: 16px; } }
+      font-size: 16px !important; } }
 
 .f17 {
   font-size: 15px; }
@@ -189,6 +189,15 @@ img {
   @media (min-width: 768px) {
     .f30 {
       font-size: 30px; } }
+
+.f35 {
+  font-size: 27px; }
+  @media (min-width: 576px) {
+    .f35 {
+      font-size: 30px; } }
+  @media (min-width: 768px) {
+    .f35 {
+      font-size: 35px; } }
 
 .f40 {
   font-size: 28px; }
@@ -364,6 +373,26 @@ a {
     .start-company {
       height: auto; } }
 
+.allBusiness__items__outer::after, .allBusiness__items__outer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 25px;
+  display: block;
+  z-index: 10; }
+  @media (min-width: 1400px) {
+    .allBusiness__items__outer::after, .allBusiness__items__outer::before {
+      display: none; } }
+
+.allBusiness__items__outer::after {
+  right: -10px;
+  background-image: linear-gradient(to left, #adb764 30%, rgba(173, 183, 100, 0.1)); }
+
+.allBusiness__items__outer::before {
+  left: -10px;
+  background-image: linear-gradient(to right, #adb764 30%, rgba(173, 183, 100, 0.1)); }
+
 /* ========== Style SVG ========== */
 .resize-svg {
   width: 80px;
@@ -481,6 +510,14 @@ a {
     .flex-basis-performance {
       flex-basis: calc(98% / 2); } }
 
+@media (min-width: 768px) {
+  .flex-basis-gallary {
+    flex-basis: calc(95% / 2); } }
+
+@media (min-width: 992px) {
+  .flex-basis-gallary {
+    flex-basis: calc(97% / 3); } }
+
 .shadows {
   box-shadow: 0px 0px 20px #2b569f24; }
   .shadows-app {
@@ -503,8 +540,14 @@ a {
   .width-95 {
     width: 95%; } }
 
+.width-150 {
+  width: 150px; }
+
 .opacity-0 {
   opacity: 0; }
+
+.max-width {
+  max-width: 100%; }
 
 .btn {
   font-size: 14px;
@@ -541,6 +584,17 @@ a {
       .btn.yellowish:hover {
         background-color: rgba(246, 180, 82, 0.9);
         border-color: rgba(246, 180, 82, 0.9); } }
+  .btn-outline-yellowish {
+    color: var(--color-yellowish);
+    border-color: var(--color-yellowish); }
+    @media (hover: hover) {
+      .btn-outline-yellowish:hover {
+        background-color: var(--color-yellowish);
+        color: var(--color-blueish); } }
+    .btn-outline-yellowish--active {
+      background-color: var(--color-yellowish);
+      color: var(--color-blueish);
+      pointer-events: none; }
 
 @media (min-width: 768px) {
   .carousel-control-next,
@@ -853,30 +907,57 @@ textarea.form-control {
     transform: perspective(1000px) rotateX(0deg);
     opacity: 1; } }
 
+@-webkit-keyframes scale1 {
+  0% {
+    transform: scale(0);
+    opacity: 0; }
+  50% {
+    transform: scale(0.5);
+    opacity: 0.5; }
+  100% {
+    transform: scale(1);
+    opacity: 1; } }
+
+@keyframes scale1 {
+  0% {
+    transform: scale(0);
+    opacity: 0; }
+  50% {
+    transform: scale(0.5);
+    opacity: 0.5; }
+  100% {
+    transform: scale(1);
+    opacity: 1; } }
+
 .anim__slideUp {
-  -webkit-animation: slideUp 1s ease both;
-          animation: slideUp 1s ease both;
+  -webkit-animation: slideUp 1s ease-in-out both;
+          animation: slideUp 1s ease-in-out both;
   will-change: animation; }
 
 .anim__slideUp3D {
-  -webkit-animation: slideUp3D 1s ease both;
-          animation: slideUp3D 1s ease both;
+  -webkit-animation: slideUp3D 1s ease-in-out both;
+          animation: slideUp3D 1s ease-in-out both;
   will-change: animation; }
 
 .anim__slideDown {
-  -webkit-animation: slideDown 1s ease both;
-          animation: slideDown 1s ease both;
+  -webkit-animation: slideDown 1s ease-in-out both;
+          animation: slideDown 1s ease-in-out both;
   will-change: animation; }
 
 .anim__slideLeft {
-  -webkit-animation: slideLeft 1s ease both;
-          animation: slideLeft 1s ease both;
+  -webkit-animation: slideLeft 1s ease-in-out both;
+          animation: slideLeft 1s ease-in-out both;
   will-change: animation; }
 
 .anim__slideRight {
-  -webkit-animation: slideRight 1s ease both;
-          animation: slideRight 1s ease both;
+  -webkit-animation: slideRight 1s ease-in-out both;
+          animation: slideRight 1s ease-in-out both;
   will-change: animation; }
+
+@media (min-width: 768px) {
+  .anim-scale1 {
+    -webkit-animation: scale1 0.5s linear forwards;
+            animation: scale1 0.5s linear forwards; } }
 
 .accordion-button::after {
   margin-right: auto;
