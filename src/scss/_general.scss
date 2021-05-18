@@ -634,12 +634,66 @@ a {
   &-150 {
     width: 150px;
   }
+
+  &-40 {
+    width: 40px;
+  }
 }
 
+// 
+.height {
+
+  // 
+  &-40 {
+    height: 40px;
+  }
+}
+
+// 
 .opacity-0 {
   opacity: 0;
 }
 
+// 
 .max-width {
   max-width: 100%;
+}
+
+// 
+.margin--100 {
+  margin-top: -100px;
+}
+
+// 
+.h-vw-40 {
+  height: 40vw;
+}
+
+// 
+.hover {
+
+  // 
+  &-share {
+
+    // 
+    @media (hover: hover) {
+      &:hover {
+        background-color: lighten($blueish, 5%) !important;
+        color: $white;
+      }
+    }
+  }
+}
+
+
+.message-validation {
+
+  // 
+  &-form1 {
+    color: darken($light, 30%)
+  }
+
+  &-form2 {
+    color: black;
+  }
 }

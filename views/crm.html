@@ -25,7 +25,7 @@
           أنت الآن امام أفضل شركة تصميم مواقع على الانترنت
         </p>
         <!-- Form -->
-        <form class="row g-0 justify-content-between">
+        <form id="form1" name="form1" class="row g-0 justify-content-between">
           <!--  -->
           <div class="flex-basis-form mb-2 mb-lg-0">
             <input
@@ -33,7 +33,11 @@
               placeholder="الاسم"
               aria-label="First name"
               class="form-control crm bg-trans text-white"
+              autocomplete="off"
+              id="name"
             />
+            <span class="message-validation-form1 d-block" id="messageName1">
+            </span>
           </div>
           <!--  -->
           <div class="flex-basis-form">
@@ -42,7 +46,11 @@
               placeholder="رقم الهاتف"
               aria-label="Last name"
               class="form-control crm bg-trans text-white"
+              autocomplete="off"
+              id="phone"
             />
+            <span class="message-validation-form1 d-block" id="messagePhone">
+            </span>
           </div>
           <!--  -->
           <button type="submit" role="submit" class="btn yellowish mt-3">

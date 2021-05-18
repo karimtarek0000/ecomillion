@@ -543,11 +543,34 @@ a {
 .width-150 {
   width: 150px; }
 
+.width-40 {
+  width: 40px; }
+
+.height-40 {
+  height: 40px; }
+
 .opacity-0 {
   opacity: 0; }
 
 .max-width {
   max-width: 100%; }
+
+.margin--100 {
+  margin-top: -100px; }
+
+.h-vw-40 {
+  height: 40vw; }
+
+@media (hover: hover) {
+  .hover-share:hover {
+    background-color: #3061b3 !important;
+    color: #ffffff; } }
+
+.message-validation-form1 {
+  color: #aaaaaa; }
+
+.message-validation-form2 {
+  color: black; }
 
 .btn {
   font-size: 14px;
@@ -810,22 +833,24 @@ textarea.form-control {
 
 .blog-slider .slider-item {
   background-color: var(--color-white); }
-  .blog-slider .slider-item .item-body {
-    padding: 33px 20px; }
-    .blog-slider .slider-item .item-body a {
-      text-decoration: none; }
-      .blog-slider .slider-item .item-body a i {
-        font-size: 12px;
-        width: 20px;
-        height: 20px;
-        text-align: center;
-        line-height: 1.8;
-        color: var(--color-white);
-        background-color: var(--color-blueish); }
-      .blog-slider .slider-item .item-body a:hover {
+
+.item-body {
+  padding: 33px 20px; }
+  .item-body a {
+    text-decoration: none; }
+    .item-body a i {
+      font-size: 12px;
+      width: 20px;
+      height: 20px;
+      text-align: center;
+      line-height: 1.8;
+      color: var(--color-white);
+      background-color: var(--color-blueish); }
+    @media (hover: hover) {
+      .item-body a:hover {
         color: var(--color-yellowish) !important; }
-        .blog-slider .slider-item .item-body a:hover i {
-          background-color: var(--color-yellowish) !important; }
+        .item-body a:hover i {
+          background-color: var(--color-yellowish) !important; } }
 
 @-webkit-keyframes slideUp {
   from {

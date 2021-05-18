@@ -115,24 +115,29 @@
   }
   .slider-item {
     background-color: color(white);
-    .item-body {
-      padding: 33px 20px;
-      a {
-        text-decoration: none;
+  }
+}
+
+// 
+.item-body {
+  padding: 33px 20px;
+  a {
+    text-decoration: none;
+    i {
+      font-size: 12px;
+      width: 20px;
+      height: 20px;
+      text-align: center;
+      line-height: 1.8;
+      color: color(white);
+      background-color: color(blueish);
+    }
+    // 
+    @media (hover: hover) {
+      &:hover {
+        color: color(yellowish) !important;
         i {
-          font-size: 12px;
-          width: 20px;
-          height: 20px;
-          text-align: center;
-          line-height: 1.8;
-          color: color(white);
-          background-color: color(blueish);
-        }
-        &:hover {
-          color: color(yellowish) !important;
-          i {
-            background-color: color(yellowish) !important;
-          }
+          background-color: color(yellowish) !important;
         }
       }
     }

@@ -91,9 +91,7 @@
 </nav>
 
 
-    <main role="main" id="mobile"></main>
-  </body>
-</html>
+    <main role="main" id="mobile">
 
 
 <!-- Header -->
@@ -825,28 +823,42 @@
     <div class="sec-content">
       <div class="row justify-content-center">
         <div class="col-md-7">
-          <form action="">
-            <input
-              class="form-control p-4 mb-3"
-              type="text"
-              name="username"
-              id="username"
-              placeholder="اسمك الكريم"
-            />
-            <input
-              class="form-control p-4 mb-3"
-              type="email"
-              name="email"
-              id="email"
-              placeholder="البريد الإلكتروني"
-            />
-            <textarea
-              class="form-control p-4 mb-3"
-              name="message"
-              id="message"
-              rows="5"
-              placeholder="نص الرسالة"
-            ></textarea>
+          <form name="form2">
+            <div class="mb-3">
+              <input
+                class="form-control p-4"
+                type="text"
+                name="username"
+                id="name2"
+                placeholder="اسمك الكريم"
+                autocomplete="off"
+              />
+              <span class="message-validation-form2 d-block" id="messageName2">
+            </span>
+            </div>
+            <!--  -->
+            <div class="mb-3">
+              <input
+                class="form-control p-4"
+                type="email"
+                name="email"
+                id="email"
+                placeholder="البريد الإلكتروني"
+                autocomplete="off"
+              />
+              <span class="message-validation-form2 d-block" id="messageEmail">
+            </div>
+            <!--  -->
+            <div class="mb-3">
+              <textarea
+                class="form-control p-4"
+                name="message"
+                id="textArea"
+                rows="5"
+                placeholder="نص الرسالة"
+              ></textarea>
+              <span class="message-validation-form2 d-block" id="messageTextArea">
+            </div>  
             <input
               class="btn yellowish w-100"
               type="submit"

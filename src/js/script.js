@@ -191,3 +191,177 @@ $(".allBusiness__items .allBusiness__items__item").on("click", function () {
       }
     });
 });
+
+/////////////////////////////////
+// Validation Form
+function validationForm() {
+  // Forms
+  const form1 = $('form[name="form1"]');
+  const form2 = $('form[name="form2"]');
+
+  // All input
+  const allInput = {
+    phone: "#phone",
+    name: "#name",
+    name2: "#name2",
+    email: "#email",
+    textArea: "#textArea",
+  };
+
+  // All fileds message
+  const filedsMessage = {
+    messageName1: $("#messageName1"),
+    messageName2: $("#messageName2"),
+    messagePhone: $("#messagePhone"),
+    messageEmail: $("#messageEmail"),
+    messageTextArea: $("#messageTextArea"),
+  };
+
+  // Data center form
+  const dataForm = {
+    name: null,
+    phone: null,
+    email: null,
+    message: null
+  };
+
+  // Regexp
+  const regExp = {
+    name: /^[\D]{4,}$/g,
+    email: /^([A-z]|[0-9]){3,}@[A-z]{3,7}[.]{1}[A-z]{2,4}$/g,
+    phone: /^[\d]{7,11}$/,
+    textArea: /^[\D]{15,}$/g,
+  };
+
+  // All messages errors
+  const messageErrors = {
+      name: {
+      en: "must write name",
+      ar: "يجب ادخال الاسم",
+    },
+      email: {
+      en: "write correct email",
+      ar: "يجب ادخال الايميل بشكل صحيح",
+    },
+    phone: {
+      en: "write between 7 and 11 numbers",
+      ar: "يجب ادخال من ٧ الي ١١ رقم",
+    },
+    text: {
+      en: "You must write message",
+      ar: "يجب ادخال رسالة",
+    },
+  };
+
+  // 1) - Get value from input phone and name
+  $(allInput.email)
+    .add(allInput.phone)
+    .add(allInput.name)
+    .add(allInput.name2)
+    .add(allInput.textArea)
+    .on("input", function () {
+      //
+      const getId = $(this).attr("id");
+
+      // 1) Check if get id equal => PHONE
+      if (getId === allInput.phone.replace("#", "")) {
+        // Check if value input equal regular expersion
+        if ($(this).val().match(regExp.phone)) {
+          dataForm.phone = $(this).val();
+          renderMessageErrorUI("messagePhone");
+        } else {
+          renderMessageErrorUI("messagePhone", "phone");
+        }
+      }
+
+      // 2) Check if get id equal => NAME
+      if (getId === allInput.name.replace("#", "") || getId === allInput.name2.replace("#", "")) {
+        // 
+        const getIdMessageName = $(this).next().attr('id')
+        // Check if value input equal regular expersion
+        if ($(this).val().match(regExp.name)) {
+          dataForm[getId] = $(this).val();
+          renderMessageErrorUI(getIdMessageName);
+        } else {
+          renderMessageErrorUI(getIdMessageName, "name");
+        }
+      }
+    
+      // 3) Check if get id equal => EMAIL
+      if (getId === allInput.email.replace("#", "")) {
+        if ($(this).val().match(regExp.email)) {
+          dataForm.email = $(this).val().toLowerCase();
+          renderMessageErrorUI("messageEmail");
+        } else {
+          renderMessageErrorUI("messageEmail", "email");
+        }
+      }
+
+      // 4) Check if get id equal => TEXTAREA
+      if (getId === allInput.textArea.replace("#", "")) {
+        if ($(this).val()) {
+          dataForm.message = $(this).val();
+          renderMessageErrorUI("messageTextArea");
+        } else {
+          renderMessageErrorUI("messageTextArea", "text");
+        }
+      }
+    });
+
+  // 3) - Render message error ui
+  function renderMessageErrorUI(type, nameKey = "") {
+    // const lang = $("html").attr("lang");
+    //
+    nameKey == ""
+      ? filedsMessage[type].text("")
+      : filedsMessage[type].text(messageErrors[nameKey]['ar']);
+  }
+
+  // 4) - Remove all data after send data to API
+  $(allInput.email).add(allInput.name).add(allInput.name2).add(allInput.phone).add(allInput.name).add(allInput.textArea).on('removeValue', function() {
+    $(this).val('');
+  });
+
+  // 5) - Event submit on form
+  form1.add(form2).on("submit", function(e) {
+    // 1) Disable behover submit
+    e.preventDefault();
+
+    // 2) Get attr name from form
+    const selectForm = $(this).attr('name');
+
+    // Form 1
+    if(selectForm === 'form1') {
+      // 2) If all data required exsist will be send data to api
+      if (dataForm.phone && dataForm.name) {
+        // 1) - Send all data to API
+        const data = Object.assign({}, { name: dataForm.name, phone: dataForm.phone});
+        // 2) - Remove all data from input
+        $(allInput.name).add(allInput.phone).trigger('removeValue');
+      } else {
+        // Trigger input validation
+        $(allInput.phone).add(allInput.name).trigger("input");
+      }
+    }
+
+    // Form 2
+    if(selectForm === 'form2') {
+      if(dataForm.name2 && dataForm.email && dataForm.message) {
+        // 1) - Send all data to API
+        const data = Object.assign({}, { name: dataForm.name2, email: dataForm.email, message: dataForm.message});
+        // 2) - Remove all data from input
+        $(allInput.name2).add(allInput.email).add(allInput.textArea).trigger('removeValue');
+        
+      } else {
+        // Trigger input validation
+        $(allInput.name2).add(allInput.email).add(allInput.textArea).trigger("input");
+      }
+    }
+
+    
+  });
+
+}
+
+// Call fn validationForm
+validationForm();
