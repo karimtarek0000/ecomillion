@@ -593,20 +593,21 @@ a {
 
   //
   &-app {
-    box-shadow: 0px 0px 20px #38455a1a;
+    box-shadow: 0px 0px 20px #38455a08;
   }
 }
 
 //
 .margin-title-section {
-  margin: 90px 0;
+  margin: 60px 0;
 
   //
-  @media (max-width: $phones) {
-    margin: 35px 0 30px 0;
+  @media (max-width: $desktops) {
+    margin: 40px 0 30px 0;
   }
 }
 
+// 
 .remove-bg-hover {
   //
   &:hover {
@@ -660,13 +661,36 @@ a {
 }
 
 // 
-.margin--100 {
-  margin-top: -100px;
+.margin {
+
+  &--100 {
+    margin-top: -100px;
+  }
+  
+  &-100 {
+    // 
+    @media (min-width: $desktops) {
+      margin-top: 100px;
+    }
+  }
 }
 
 // 
-.h-vw-40 {
-  height: 40vw;
+.h-vw {
+
+  // 
+  &-40 {
+    height: 40vw;
+  }
+
+  // 
+  &-30 {
+ height: 30vw;
+
+  @media (max-width: $phones) {
+    min-height: 40vw;
+  }
+  }
 }
 
 // 
@@ -685,7 +709,7 @@ a {
   }
 }
 
-
+// 
 .message-validation {
 
   // 
@@ -695,5 +719,13 @@ a {
 
   &-form2 {
     color: black;
+  }
+}
+
+.z-index {
+
+  // 
+  &-10 {
+    z-index: 10;
   }
 }

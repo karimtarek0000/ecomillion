@@ -521,13 +521,13 @@ a {
 .shadows {
   box-shadow: 0px 0px 20px #2b569f24; }
   .shadows-app {
-    box-shadow: 0px 0px 20px #38455a1a; }
+    box-shadow: 0px 0px 20px #38455a08; }
 
 .margin-title-section {
-  margin: 90px 0; }
-  @media (max-width: 576px) {
+  margin: 60px 0; }
+  @media (max-width: 992px) {
     .margin-title-section {
-      margin: 35px 0 30px 0; } }
+      margin: 40px 0 30px 0; } }
 
 .remove-bg-hover:hover {
   background-color: transparent !important; }
@@ -558,8 +558,18 @@ a {
 .margin--100 {
   margin-top: -100px; }
 
+@media (min-width: 992px) {
+  .margin-100 {
+    margin-top: 100px; } }
+
 .h-vw-40 {
   height: 40vw; }
+
+.h-vw-30 {
+  height: 30vw; }
+  @media (max-width: 576px) {
+    .h-vw-30 {
+      min-height: 40vw; } }
 
 @media (hover: hover) {
   .hover-share:hover {
@@ -571,6 +581,9 @@ a {
 
 .message-validation-form2 {
   color: black; }
+
+.z-index-10 {
+  z-index: 10; }
 
 .btn {
   font-size: 14px;

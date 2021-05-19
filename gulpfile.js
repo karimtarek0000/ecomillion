@@ -424,6 +424,162 @@ async function includeHTML() {
               },
             ],
           },
+          socialMedia: {
+            features: [
+              {
+                icon: "vector",
+                title: "بناء العلامة التجارية",
+              },
+              {
+                icon: "sketch",
+                title: "بناء العلامة الشخصية",
+              },
+              {
+                icon: "device",
+                title: "إنشاء موقع إجترافي",
+              },
+              {
+                icon: "advertising",
+                title: "تفعيل مدير الإعلانات",
+              },
+              {
+                icon: "link",
+                title: "ربط البيكسل",
+              },
+              {
+                icon: "marketing",
+                title: "الترويج",
+              },
+              {
+                icon: "analysis",
+                title: "التحليل",
+              },
+              {
+                icon: "efficiency",
+                title: "مؤشرات قياس الأداء",
+              },
+              {
+                icon: "layer",
+                title: "أدوات إحترافية",
+              },
+            ],
+          },
+          googleAdvertising: {
+             features: [
+              {
+                icon: "search2",
+                title: "Search Ads",
+              },
+              {
+                icon: "connection",
+                title: "display network",
+              },
+              {
+                icon: "price-tag",
+                title: "shopping ads",
+              },
+              {
+                icon: "video-marketing",
+                title: "video ads",
+              },
+              {
+                icon: "speedometer",
+                title: "kpis",
+              },
+              {
+                icon: "pie-chart",
+                title: "google analytics",
+              },
+            ],
+          },
+          optimizeSeo: {
+            property: [
+              {
+                title: "زيادة حركة المرور",
+              },
+              {
+                title: "عائد الإستثمار",
+              },
+              {
+                title: "الوعي بالعلامة التجارية",
+              },
+              {
+                title: "الفعالية من حيث التكلفة",
+              },
+              {
+                title: "زيادة قابلية إستخدام الموقع",
+              },
+              {
+                title: "تحسين تجربة المستخدم",
+              },
+            ],
+            features: [
+              {
+                icon: 'statistics2',
+                title: 'Technical SEO'
+              },
+              {
+                icon: 'seo',
+                title: 'On-Page SEO'
+              },
+              {
+                icon: 'search',
+                title: 'المحتوى SEO'
+              },
+              {
+                icon: 'offpage',
+                title: 'Off-Page SEO'
+              },
+              {
+                icon: 'seo2',
+                title: 'المحلي SEO'
+              },
+              {
+                icon: 'mobile-phone',
+                title: 'Mobile SEO'
+              },
+              {
+                icon: 'seotrade',
+                title: 'التجارة اإللكترونية SEO'
+              },
+              {
+                icon: 'speedometer',
+                title: 'مؤشرات قياس الأداء'
+              },
+              {
+                icon: 'layer',
+                title: 'أدوات احترافية'
+              }
+            ]
+          },
+          brandBuilding: {
+            features: [
+              {
+                icon: 'domain-registration',
+                title: 'الإسم والدومين'
+              },
+              {
+                icon: 'vector',
+                title: 'تصميم العلامة التجارية'
+              },
+              {
+                icon: 'sketch',
+                title: 'تصميم الشعار'
+              },
+              {
+                icon: 'create',
+                title: 'رسومات الشعار'
+              },
+              {
+                icon: 'redesign',
+                title: 'إعادة تصميم الهوية التجارية'
+              },
+              {
+                icon: 'support',
+                title: 'إستشارات'
+              }
+            ]
+          },
           slider: [
             "abqary.png",
             "fat.png",

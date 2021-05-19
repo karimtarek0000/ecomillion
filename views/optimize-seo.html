@@ -1,0 +1,158 @@
+@@include( './includes/header.html', {"webRoot": ".", "document-title":
+"EcoMillion-optimize-seo", "page-id": "optimize-seo"} )
+
+<!-- Header -->
+<section class="header" id="header">
+  <!--  -->
+  <div class="container h-100">
+    <!--  -->
+    <div
+      class="
+        row
+        g-0
+        align-items-center
+        justify-content-center justify-content-lg-between
+        h-100
+      "
+    >
+      <div class="col-md-6 opacity-0" role="info" data-anim="slideRight">
+        <h1 role="head-title" class="f50 is-accent my-4 my-lg-5">
+          تحسين محركات البحث
+        </h1>
+        <p role="description" class="f16 text-white mb-2 mb-lg-5 mx-auto my-4 lh-lg">
+        تاني اصعب مرحله بعد توفير المنتج او الخدمه هى كيفيه الوصول الى شريحتك المستهدفه؟ وكيفية اقناعها بالشراء منك من خلال إعاده الاستهداف؟ من خلال خبراتنا الواسعه فى الاعلانات سوف ناخذ بيدك للوصول الى شريحتك المستهدفه بدقه.
+        </p>
+        <!-- Form -->
+        <form id="form1" name="form1" class="row g-0 justify-content-between">
+          <!--  -->
+          <div class="flex-basis-form mb-2 mb-lg-0">
+            <input
+              type="text"
+              placeholder="الاسم"
+              aria-label="First name"
+              class="form-control crm bg-trans text-white"
+              autocomplete="off"
+              id="name"
+            />
+            <span class="message-validation-form1 d-block" id="messageName1">
+            </span>
+          </div>
+          <!--  -->
+          <div class="flex-basis-form">
+            <input
+              type="tel"
+              placeholder="رقم الهاتف"
+              aria-label="Last name"
+              class="form-control crm bg-trans text-white"
+              autocomplete="off"
+              id="phone"
+            />
+            <span class="message-validation-form1 d-block" id="messagePhone">
+            </span>
+          </div>
+          <!--  -->
+          <button type="submit" role="submit" class="btn yellowish mt-3">
+            <img class="ms-2" src="@@webRoot/assets/img/send.svg" alt="" />
+            <span class="align-middle">أطلب الخدمة الأن</span>
+          </button>
+        </form>
+      </div>
+      <!--  -->
+      <figure
+        class="col-md-6 my-3 col-lg-5 text-center opacity-0"
+        role="image"
+        data-anim="slideLeft"
+      >
+        <img class="img-fluid h-vw-30" src="@@webRoot/assets/img/optimize-seo.svg" alt="" />
+      </figure>
+    </div>
+  </div>
+</section>
+
+
+<!-- Section Properties -->
+<section class="overflow-hidden" id="property">
+  <!--  -->
+  <div class="container">
+    <!--  -->
+    <div class="sec-head text-center margin-title-section">
+      <h2
+        class="title"
+        data-text="على ماذا ستحصل من تحسين محركات البحث ؟
+      "
+      >
+       على ماذا ستحصل من تحسين محركات البحث ؟
+      </h2>
+    </div>
+    <!--  -->
+    <div
+      class="row justify-content-between bg-light-2 opacity-0 pt-3 px-2"
+      data-anim="slideDown"
+    >
+      @@for(var item = 0; item < optimizeSeo.property.length; item++) {
+      <!--  -->
+      <div
+        class="
+          flex-basis-app
+          d-flex
+          mb-3
+          align-items-start
+          py-3
+          shadows-app
+          bg-white
+        "
+      >
+        <i class="fas fa-check is-accent f30 mx-3"></i>
+        <div>
+            <h3 role="title" class="f25 fBold mb-3">`+optimizeSeo.property[item].title+`</h3>
+            <p role="description" class="f16 is-dimmed lh-lg">مشاريع الانترنت هي المستقبل فجميع الناس الان تقضي اوقات طويلة على تطبيقات الجوال والمواقع</p>
+        </div>
+       
+      </div>
+      }
+    </div>
+  </div>
+</section>
+
+<!-- Section -->
+<section class="sec-block change overflow-hidden" id="tools">
+  <!--  -->
+  <div class="container">
+    <!--  -->
+    <div class="sec-head text-center margin-title-section">
+      <h2 class="title" data-text="لأنك تستحق الأفضل">
+        لأنك تستحق الأفضل
+      </h2>
+    </div>
+    <!--  -->
+    <div class="sec-content opacity-0" data-anim="slideUp">
+      <div class="row justify-content-center">
+        @@for (var item = 0; item < optimizeSeo.features.length; item++){
+        <div class="col-sm-6 col-lg-4 mt-4 mt-md-5">
+          <div class="card-item text-center">
+            <figure
+              role="svg"
+              class="flex-shrink-0 mx-auto shadows py-2 rounded"
+            >
+              <svg class="resize-svg svg-fill-blueish">
+                <use
+                xlink:href=@@webRoot/assets/img/sprite.svg#icon-`+optimizeSeo.features[item].icon+`
+                >
+                <title>`+optimizeSeo.features[item].icon+`</title>
+              </svg>
+            </figure>
+            <h4 class="card-name mb-3 mb-md-4 f25 white-space-no text-capitalize">
+              `+optimizeSeo.features[item].title+`
+            </h4>
+            <p class="card-desc is-dimmed px-lg-4 lh-lg">
+           مشاريع الانترنت هي المستقبل فجميع الناس الان تقضي اوقات طويلة على تطبيقات الجوال والمواقع
+            </p>
+          </div>
+        </div>
+        }
+      </div>
+    </div>
+  </div>
+</section>
+
+@@include('./includes/footer.html', {"webRoot": "."})
