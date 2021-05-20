@@ -2,7 +2,7 @@
 "EcoMillion-social-media", "page-id": "social-media"} )
 
 <!-- Header -->
-<section class="header" id="header">
+<header class="header" id="header">
   <!--  -->
   <div class="container h-100">
     <!--  -->
@@ -11,7 +11,7 @@
         row
         g-0
         align-items-center
-        justify-content-center justify-content-lg-between
+        justify-content-center align-content-center justify-content-lg-between
         h-100
       "
     >
@@ -67,10 +67,10 @@
       </figure>
     </div>
   </div>
-</section>
+</header>
 
 <!-- Section -->
-<section class="sec-block change overflow-hidden" id="tools">
+<section class="sec-block change overflow-hidden opacity-0" id="tools" data-anim="slideUp">
   <!--  -->
   <div class="container">
     <!--  -->
@@ -80,7 +80,7 @@
       </h2>
     </div>
     <!--  -->
-    <div class="sec-content opacity-0" data-anim="slideUp">
+    <div class="sec-content">
       <div class="row justify-content-center">
         @@for (var item = 0; item < socialMedia.features.length; item++){
         <div class="col-sm-6 col-lg-4 mt-4 mt-md-5">

@@ -1,3 +1,12 @@
+/////////////////////////////////
+// Navbar
+jQuery(function() {
+  $('.nav-item.active').removeClass('active');
+  $(`.nav-link[href="${location.pathname}"]`).closest('.nav-item').addClass('active'); 
+});
+
+/////////////////////////////////
+// Sliders
 $(".slider").owlCarousel({
   rtl: true,
   center: true,
@@ -47,22 +56,22 @@ $(".blog-slider").owlCarousel({
 });
 
 // show toggle password
-$(".toggle-password").click(function () {
-  $(this).toggleClass("fa-eye fa-eye-slash");
-  var input = $($(this).prev());
-  if (input.attr("type") == "password") {
-    input.attr("type", "text");
-  } else {
-    input.attr("type", "password");
-  }
-});
+// $(".toggle-password").click(function () {
+//   $(this).toggleClass("fa-eye fa-eye-slash");
+//   var input = $($(this).prev());
+//   if (input.attr("type") == "password") {
+//     input.attr("type", "text");
+//   } else {
+//     input.attr("type", "password");
+//   }
+// });
 
 // Show file name
 // Preview no# of files to upload
-$("#file").change(function () {
-  let file = $(this)[0].files[0];
-  $(this).siblings(".overlay").find("label").text(file.name);
-});
+// $("#file").change(function () {
+//   let file = $(this)[0].files[0];
+//   $(this).siblings(".overlay").find("label").text(file.name);
+// });
 
 /////////////////////////////////
 // Animation

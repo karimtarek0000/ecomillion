@@ -44,7 +44,7 @@
         <span class="navbar-toggler-icon ms-3"></span>
       </button>
 
-      <a class="navbar-brand" href="./index.html">
+      <a class="navbar-brand" href="/">
         <img src="./assets/img/logo.png" alt="Website Logo" />
       </a>
     </div>
@@ -54,8 +54,8 @@
       id="main-nav"
     >
       <ul class="navbar-nav mx-auto">
-        <li class="nav-item active">
-          <a class="nav-link px-3 px-lg-2" href="./">الرئيسية</a>
+        <li class="nav-item">
+          <a class="nav-link px-3 px-lg-2" href="/">الرئيسية</a>
         </li>
         <li class="nav-item">
           <a class="nav-link px-3 px-lg-2" href="./">عن الشركة</a>
@@ -66,11 +66,19 @@
         <li class="nav-item">
           <a class="nav-link px-3 px-lg-2" href="./">ERP</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link px-3 px-lg-2" href="./">خدمات الشركة</a>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle px-3 px-lg-2" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+           خدمات الشركة
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
         </li>
         <li class="nav-item">
-          <a class="nav-link px-3 px-lg-2" href="./">أعمالنا</a>
+          <a class="nav-link px-3 px-lg-2" href="/our-business.html">أعمالنا</a>
         </li>
         <li class="nav-item">
           <a class="nav-link px-3 px-lg-2" href="./">المدونة</a>
@@ -95,7 +103,7 @@
 
 
 <!-- Header -->
-<section id="header" class="header">
+<header id="header" class="header">
   <!--  -->
   <div class="container h-100">
     <!--  -->
@@ -121,10 +129,10 @@
       </div>
     </div>
   </div>
-</section>
+</header>
 
 <!-- Offers -->
-<section id="offers" class="offers">
+<section id="offers" class="offers opacity-0" data-anim="slideUp">
   <!--  -->
   <div class="container overflow-hidden">
     <!--  -->
@@ -134,7 +142,7 @@
       </h2>
     </div>
     <!--  -->
-    <div class="row opacity-0" data-anim="slideUp">
+    <div class="row">
       <!--  -->
       <div class="offers__category">
         <div class="row justify-content-between g-0">
@@ -408,7 +416,7 @@
 </section>
 
 <!-- Success techniques section -->
-<section class="sec-block change overflow-hidden" id="tools">
+<section class="sec-block change overflow-hidden opacity-0" id="tools" data-anim="slideUp">
   <!--  -->
   <div class="container">
     <!--  -->
@@ -418,7 +426,7 @@
       </h2>
     </div>
     <!--  -->
-    <div class="sec-content opacity-0" data-anim="slideUp">
+    <div class="sec-content">
       <div class="row justify-content-center">
         
         <div class="col-sm-6 col-lg-4 mt-4 mt-md-5">
@@ -518,8 +526,9 @@
 
 <!-- works section -->
 <section
-  class="sec-block sec-block--site overflow-hidden bg-light-primary"
+  class="sec-block sec-block--site overflow-hidden bg-light-primary opacity-0"
   id="works"
+  data-anim="slideUp"
 >
   <div class="container">
     <div class="sec-head text-center">
@@ -604,7 +613,7 @@
 </section>
 
 <!-- works 2 section -->
-<section class="sec-block overflow-hidden" id="works2">
+<section class="sec-block overflow-hidden opacity-0" id="works2" data-anim="slideUp">
   <div class="container">
     <div class="sec-head text-center">
       <h2 class="title" data-text="أعمالنا في التصميم والانتاج">

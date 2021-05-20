@@ -2,7 +2,7 @@
 "EcoMillion-optimize-seo", "page-id": "optimize-seo"} )
 
 <!-- Header -->
-<section class="header" id="header">
+<header class="header" id="header">
   <!--  -->
   <div class="container h-100">
     <!--  -->
@@ -11,7 +11,7 @@
         row
         g-0
         align-items-center
-        justify-content-center justify-content-lg-between
+        justify-content-center align-content-center justify-content-lg-between
         h-100
       "
     >
@@ -67,11 +67,10 @@
       </figure>
     </div>
   </div>
-</section>
-
+</header>
 
 <!-- Section Properties -->
-<section class="overflow-hidden" id="property">
+<section class="overflow-hidden opacity-0" id="property" data-anim="slideUp">
   <!--  -->
   <div class="container">
     <!--  -->
@@ -86,8 +85,7 @@
     </div>
     <!--  -->
     <div
-      class="row justify-content-between bg-light-2 opacity-0 pt-3 px-2"
-      data-anim="slideDown"
+      class="row justify-content-between bg-light-2 pt-3 px-2"
     >
       @@for(var item = 0; item < optimizeSeo.property.length; item++) {
       <!--  -->
@@ -115,7 +113,7 @@
 </section>
 
 <!-- Section -->
-<section class="sec-block change overflow-hidden" id="tools">
+<section class="sec-block change overflow-hidden opacity-0" id="tools" data-anim="slideUp">
   <!--  -->
   <div class="container">
     <!--  -->
@@ -125,7 +123,7 @@
       </h2>
     </div>
     <!--  -->
-    <div class="sec-content opacity-0" data-anim="slideUp">
+    <div class="sec-content">
       <div class="row justify-content-center">
         @@for (var item = 0; item < optimizeSeo.features.length; item++){
         <div class="col-sm-6 col-lg-4 mt-4 mt-md-5">

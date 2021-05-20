@@ -580,6 +580,42 @@ async function includeHTML() {
               }
             ]
           },
+          trainingConsulting: {
+            features: [
+              {
+                icon: 'trade',
+                title: 'أساسيات التجارة الإلكترونية'
+              },
+              {
+                icon: 'shopping',
+                title: 'شراء منتجات مربحة'
+              },
+              {
+                icon: 'price-tag',
+                title: 'التسعير'
+              },
+              {
+                icon: 'store',
+                title: 'إدارة المتجر بالكامل'
+              },
+              {
+                icon: 'megaphone',
+                title: 'التسويق الإلكتروني'
+              },
+              {
+                icon: 'social-media',
+                title: 'إدارة مواقع التواصل'
+              },
+              {
+                icon: 'vector',
+                title: 'بناء العلامة التجارية'
+              },
+              {
+                icon: 'interface',
+                title: 'والمزيد'
+              }
+            ]
+          },
           slider: [
             "abqary.png",
             "fat.png",

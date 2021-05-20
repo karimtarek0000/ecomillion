@@ -2,7 +2,7 @@
 "EcoMillion-employees", "page-id": "employees"} )
 
 <!-- Header -->
-<section class="header" id="header">
+<header class="header" id="header">
   <!--  -->
   <div class="container h-100">
     <!--  -->
@@ -69,10 +69,10 @@
       </figure>
     </div>
   </div>
-</section>
+</header>
 
 <!-- Section -->
-<section class="sec-block change overflow-hidden" id="tools">
+<section class="sec-block change overflow-hidden opacity-0" data-anim="slideUp" id="tools">
   <!--  -->
   <div class="container">
     <!--  -->
@@ -82,7 +82,7 @@
       </h2>
     </div>
     <!--  -->
-    <div class="sec-content opacity-0" data-anim="slideUp">
+    <div class="sec-content">
       <div class="row justify-content-center">
         @@for (var item = 0; item < employees.features.length; item++){
         <div class="col-sm-6 col-lg-4 mt-4 mt-md-5">
@@ -148,7 +148,7 @@
 </section>
 
 <!-- Section odoo ERP -->
-<section class="overflow-hidden" id="erp">
+<section class="overflow-hidden opacity-0" data-anim="slideDown" id="erp">
   <div class="container">
     <!--  -->
     <div class="sec-head text-center margin-title-section">
@@ -157,7 +157,7 @@
       </h2>
     </div>
     <!--  -->
-    <div class="row opacity-0" data-anim="slideDown">
+    <div class="row">
       @@for(var item = 0; item < employees.featuresOdoo.length; item++) {
       <!--  -->
       <div

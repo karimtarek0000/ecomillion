@@ -2,7 +2,7 @@
 "EcoMillion-host", "page-id": "host"} )
 
 <!-- Header -->
-<section id="header" class="header">
+<header id="header" class="header">
   <!--  -->
   <div class="container h-100">
     <!--  -->
@@ -28,10 +28,10 @@
       </div>
     </div>
   </div>
-</section>
+</header>
 
 <!-- Offers -->
-<section id="offers" class="offers">
+<section id="offers" class="offers opacity-0" data-anim="slideUp">
   <!--  -->
   <div class="container overflow-hidden">
     <!--  -->
@@ -42,7 +42,7 @@
     <div class="row">
       <!--  -->
       <div class="offers__category">
-        <div class="row justify-content-between g-0 opacity-0" data-anim="slideUp">
+        <div class="row justify-content-between g-0">
           <!--  -->
           <div
             class="offers__category__card flex-basis-offers mb-3 mb-lg-0 shadows flex-grow-0"
@@ -206,13 +206,13 @@
 </section>
 
 <!-- Features hosting -->
-<section class="sec-block change features overflow-hidden" id="features-hosting">
+<section class="sec-block change features overflow-hidden opacity-0" data-anim="slideUp" id="features-hosting">
   <div class="container">
     <div class="sec-head text-center margin-title-section">
       <h2 class="title" data-text="مميزات الاستضافة">مميزات الاستضافة</h2>
     </div>
     <div class="sec-content mt--45">
-      <div class="row justify-content-center opacity-0" data-anim="slideUp">
+      <div class="row justify-content-center">
         @@for (var item = 0; item < hostingFeatures.length; item++){
         <div class="col-sm-6 col-md-4 col-lg-3 mt-4 mt-md-5">
           <div class="card-item text-center">
@@ -238,5 +238,4 @@
 
 
 @@include('./includes/contact.html', {"webRoot": "."})
-
 @@include('./includes/footer.html', {"webRoot": "."})
