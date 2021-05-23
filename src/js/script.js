@@ -6,6 +6,45 @@ jQuery(function() {
 });
 
 /////////////////////////////////
+// COUNTER SECTION
+let section = $('#stats');
+let allCount = $('.count-num');
+let statusScroll = true;
+// FUNCTION WINDOW SCROLL
+$(window).on('scroll', function() {
+  
+      // CONST SECTION INFORMATION OFFSET TOP MINUS 200 HEIGHT
+      const sectionInfoOffs = (section.offset().top);
+      
+      // IF STATEMENT SCROLL TOP THIS WINDOW GT SECTION INFOEMATION OFFSET
+      if( $(this).scrollTop() >= sectionInfoOffs  && statusScroll) {
+          console.log('test');
+          
+          // EACH CLASS INFORMATION CONTENT HEAD
+          allCount.each(function() {
+              // ANMIATION 
+              $(this).attr('counter', 0).animate({
+  
+                  counter: $(this).data('num')
+  
+              }, {
+  
+                  // OPTION ANIMATION
+                  duration: 2000,
+                  easing: 'swing',
+                  step: function(now) {
+                      $(this).text( Math.ceil(now) + '%' );
+                  }
+              });
+  
+          });
+
+          // 
+          statusScroll = false
+      }
+  });
+
+/////////////////////////////////
 // Sliders
 $(".slider").owlCarousel({
   rtl: true,
