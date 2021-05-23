@@ -2,7 +2,7 @@
 // Navbar
 jQuery(function() {
   $('.nav-item.active').removeClass('active');
-  $(`.nav-link[href="${location.pathname}"]`).closest('.nav-item').addClass('active'); 
+  $(`.nav-link[href="${location.pathname}"], .dropdown-item[href="${location.pathname}"]`).closest('.nav-item').addClass('active');
 });
 
 /////////////////////////////////
@@ -374,3 +374,59 @@ function validationForm() {
 
 // Call fn validationForm
 validationForm();
+
+/////////////////////////////////
+// Blog - Date
+
+function test(num) {
+  return num.toString().replace(/\d/g, d => '٠١٢٣٤٥٦٧٨٩'[d])
+}
+
+// Add in prototype jquery
+jQuery.extend({ 
+  convertToDigitArabic: function(num) {
+    return num.toString().replace(/\d/g, d => '٠١٢٣٤٥٦٧٨٩'[d])
+  }
+});
+const blogDate = $('#blog-date');
+// 
+blogDate.on('setDate', function(e, date) {
+  const namesAllMonthes = [
+      'يناير',
+      'فبراير',
+      'مارس',
+      'ابريل',
+      'مايو',
+      'يونيو',
+      'يوليو',
+      'اغسطس',
+      'سبتمبر',
+      'اكتوبر',
+      'نوفمبر',
+      'ديسمبر'
+  ]
+  // const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+  const days = [
+    'الاحد',
+    'الاثنين',
+    'الثلاثاء',
+    'الاربعاء',
+    'الخميس',
+    'الجمعه',
+    'السبت'
+  ]
+  ////////////////////////////////////////
+  // 1) - Get date
+  const getDate = new Date(date);
+  // 2) - Get Day
+  const getDay = getDate.getDay();
+  // 3) - Get Month
+  const getMonth = getDate.getMonth();
+  // 4) - Get Year
+  const getYear = $.convertToDigitArabic(getDate.getFullYear());
+
+  return $(this).text(`${days[getDay]} , ${namesAllMonthes[getMonth]} ${getYear}`)
+});
+
+// 
+blogDate.trigger('setDate', '5-20-2021');

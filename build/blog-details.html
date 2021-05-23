@@ -54,37 +54,51 @@
       id="main-nav"
     >
       <ul class="navbar-nav mx-auto">
-        <li class="nav-item">
+        <li class="nav-item mb-2 mb-lg-0">
           <a class="nav-link px-3 px-lg-2" href="/">الرئيسية</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item mb-2 mb-lg-0">
           <a class="nav-link px-3 px-lg-2" href="./">عن الشركة</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link px-3 px-lg-2" href="./">CRM</a>
+        <li class="nav-item mb-2 mb-lg-0">
+          <a class="nav-link px-3 px-lg-2" href="/crm.html">CRM</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link px-3 px-lg-2" href="./">ERP</a>
+        <li class="nav-item mb-2 mb-lg-0">
+          <a class="nav-link px-3 px-lg-2" href="/employees.html">ERP</a>
         </li>
-        <li class="nav-item dropdown">
+        <li class="nav-item mb-2 mb-lg-0 dropdown">
           <a class="nav-link dropdown-toggle px-3 px-lg-2" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
            خدمات الشركة
           </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          <ul class="dropdown-menu text-end" aria-labelledby="navbarDropdown">
+            <li class="nav-item mb-2"><a class="dropdown-item" href="/site.html">تصميم المواقع</a></li>
+            <li class="nav-item mb-2"><a class="dropdown-item" href="/mobile.html">تصميم التطبيقات</a></li>
+            <li class="nav-item mb-2"><a class="dropdown-item" href="/host.html">الاستضافة</a></li>
+            <li class="nav-item mb-2"><a class="dropdown-item" href="/graphic-design.html">تصميم الجرافيك</a></li>
+            <li class="nav-item mb-2"><a class="dropdown-item" href="/motion-graphic.html">الموشن جرافيك</a></li>
+            <li class="nav-item mb-2"><a class="dropdown-item" href="/social-media.html">سوشيال ميديا</a></li>
+            <li class="nav-item mb-2"><a class="dropdown-item" href="/google-advertising.html">اعلانات جوجل</a></li>
+            <li class="nav-item mb-2"><a class="dropdown-item" href="/optimize-seo.html">تحسين محركات البحث</a></li>
+            <li class="nav-item mb-2"><a class="dropdown-item" href="/brand-building.html">بناء العلامه التجارية</a></li>
+             <li class="nav-item mb-2"><a class="dropdown-item" href="/training-consulting.html">التدريب و الاستشارات</a></li>
           </ul>
         </li>
-        <li class="nav-item">
-          <a class="nav-link px-3 px-lg-2" href="/our-business.html">أعمالنا</a>
+       
+         <li class="nav-item mb-2 mb-lg-0 dropdown">
+          <a class="nav-link dropdown-toggle px-3 px-lg-2" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+           اعمالنا
+          </a>
+          <ul class="dropdown-menu text-end" aria-labelledby="navbarDropdown">
+            <li class="nav-item mb-2"><a class="dropdown-item" href="/our-business.html">اعمال ابتدي</a></li>
+            <li class="nav-item mb-2"><a class="dropdown-item" href="/our-business-2.html">التصميم و الانتاج</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item mb-2 mb-lg-0">
+          <a class="nav-link px-3 px-lg-2" href="/blog.html">المدونة</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link px-3 px-lg-2" href="./">المدونة</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link px-3 px-lg-2" href="./">تواصل معنا</a>
+          <a class="nav-link px-3 px-lg-2" href="/contact-us.html">تواصل معنا</a>
         </li>
       </ul>
     </section>
@@ -113,6 +127,19 @@
         <h1 role="head-title" class="f50 is-accent my-4 my-lg-5">
           كيف تحصل على موقع مثالي صديق لمحركات البحث ؟
         </h1>
+        <div role="date" class="d-flex justify-content-center align-items-center">
+          <!--  -->
+          <figure role="svg" class="flex-shrink-0 mx-2">
+            <svg class="resize-svg-date svg-fill-white">
+              <use xlink:href="./assets/img/sprite.svg#icon-clock">
+                <title>date</title>
+            </svg>
+          </figure>
+          <!--  -->
+          <p role="date" id="blog-date" class="text-white">
+            12
+          </p>
+        </div>
       </div>
     </div>
   </div>
@@ -120,45 +147,65 @@
 
 <!-- Content -->
 <section class="position-relative margin--100">
-    <div class="container">
+  <div class="container">
+    <!--  -->
+    <div class="row opacity-0" data-anim="slideUp">
+      <!--  -->
+      <div class="col-lg-10 mx-auto">
+        <figure role="image" class="h-vw-40">
+          <img class="img-fluid object-fit-cover" src="./assets/img/05.png" alt="">
+        </figure>
         <!--  -->
-        <div class="row opacity-0" data-anim="slideUp">
-            <!--  -->
-            <div class="col-lg-10 mx-auto">
-                <figure role="image" class="h-vw-40">
-                    <img class="img-fluid object-fit-cover" src="./assets/img/05.png" alt="">
-                </figure>
-                <!--  -->
-                <p role="description" class="f16 lh-lg py-5">
-                    هنالك العديد من الأنواع المتوفرة لنصوص لوريم إيبسوم، ولكن الغالبية تم تعديلها بشكل ما عبر إدخال بعض النوادر أو الكلمات العشوائية إلى النص. إن كنت تريد أن تستخدم نص لوريم إيبسوم ما، عليك أن تتحقق أولاً أن ليس هناك أي كلمات أو عبارات محرجة أو غير لائقة مخبأة في هذا النص. بينما تعمل جميع مولّدات نصوص لوريم إيبسوم على الإنترنت على إعادة تكرار مقاطع من نص لوريم إيبسوم نفسه عدة مرات بما تتطلبه الحاجة، يقوم مولّدنا هذا باستخدام كلمات من قاموس يحوي على أكثر من 200 كلمة لا تينية، مضاف إليها مجموعة من الجمل النموذجية، لتكوين نص لوريم إيبسوم ذو شكل منطقي قريب إلى النص الحقيقي. وبالتالي يكون النص الناتح خالي من التكرار
-                    هنالك العديد من الأنواع المتوفرة لنصوص لوريم إيبسوم، ولكن الغالبية تم تعديلها بشكل ما عبر إدخال بعض النوادر أو الكلمات العشوائية إلى النص. إن كنت تريد أن تستخدم نص لوريم إيبسوم ما، عليك أن تتحقق أولاً أن ليس هناك أي كلمات أو عبارات محرجة أو غير لائقة مخبأة في هذا النص. بينما تعمل جميع مولّدات نصوص لوريم إيبسوم على الإنترنت على إعادة تكرار مقاطع من نص لوريم إيبسوم نفسه عدة مرات بما تتطلبه الحاجة، يقوم مولّدنا هذا باستخدام كلمات من قاموس يحوي على أكثر من 200 كلمة لا تينية، مضاف إليها مجموعة من الجمل النموذجية، لتكوين نص لوريم إيبسوم ذو شكل منطقي قريب إلى النص الحقيقي. وبالتالي يكون النص الناتح خالي من التكرار
-                    هنالك العديد من الأنواع المتوفرة لنصوص لوريم إيبسوم، ولكن الغالبية تم تعديلها بشكل ما عبر إدخال بعض النوادر أو الكلمات العشوائية إلى النص. إن كنت تريد أن تستخدم نص لوريم إيبسوم ما، عليك أن تتحقق أولاً أن ليس هناك أي كلمات أو عبارات محرجة أو غير لائقة مخبأة في هذا النص. بينما تعمل جميع مولّدات نصوص لوريم إيبسوم على الإنترنت على إعادة تكرار مقاطع من نص لوريم إيبسوم نفسه عدة مرات بما تتطلبه الحاجة، يقوم مولّدنا هذا باستخدام كلمات من قاموس يحوي على أكثر من 200 كلمة لا تينية، مضاف إليها مجموعة من الجمل النموذجية، لتكوين نص لوريم إيبسوم ذو شكل منطقي قريب إلى النص الحقيقي. وبالتالي يكون النص الناتح خالي من التكرار
-                </p>
-                <!--  -->
-                <div class="bg-accent d-flex flex-column flex-md-row align-items-center justify-content-center mt-3 py-3 px-2">
-                    <p role="title" class="is-primary mx-3 mb-3 mb-md-0">شارك المقال</p>
-                    <!-- Social links -->
-					<nav class="nav social">
-						<a href="#" class="nav-link facebook bg-primary mx-2 width-40 height-40 d-flex justify-content-center align-items-center hover-share">
-							<i class="fab fa-facebook-f fa-fw fa-lg"></i>
-						</a>
-						<a href="#" class="nav-link twitter bg-primary mx-2 width-40 height-40 d-flex justify-content-center align-items-center hover-share">
-							<i class="fab fa-twitter fa-fw fa-lg"></i>
-						</a>
-						<a href="#" class="nav-link instagram bg-primary mx-2 width-40 height-40 d-flex justify-content-center align-items-center hover-share">
-							<i class="fab fa-instagram fa-fw fa-lg"></i>
-						</a>
-						<a href="#" class="nav-link youtube bg-primary mx-2 width-40 height-40 d-flex justify-content-center align-items-center hover-share">
-							<i class="fab fa-youtube fa-fw fa-lg"></i>
-						</a>
-						<a href="#" class="nav-link whatsapp bg-primary mx-2 width-40 height-40 d-flex justify-content-center align-items-center hover-share">
-							<i class="fab fa-whatsapp fa-fw fa-lg"></i>
-						</a>
-					</nav>
-                </div>
-            </div>
+        <p role="description" class="f16 lh-lg py-5">
+          هنالك العديد من الأنواع المتوفرة لنصوص لوريم إيبسوم، ولكن الغالبية تم تعديلها بشكل ما عبر إدخال بعض النوادر أو
+          الكلمات العشوائية إلى النص. إن كنت تريد أن تستخدم نص لوريم إيبسوم ما، عليك أن تتحقق أولاً أن ليس هناك أي كلمات
+          أو عبارات محرجة أو غير لائقة مخبأة في هذا النص. بينما تعمل جميع مولّدات نصوص لوريم إيبسوم على الإنترنت على
+          إعادة تكرار مقاطع من نص لوريم إيبسوم نفسه عدة مرات بما تتطلبه الحاجة، يقوم مولّدنا هذا باستخدام كلمات من قاموس
+          يحوي على أكثر من 200 كلمة لا تينية، مضاف إليها مجموعة من الجمل النموذجية، لتكوين نص لوريم إيبسوم ذو شكل منطقي
+          قريب إلى النص الحقيقي. وبالتالي يكون النص الناتح خالي من التكرار
+          هنالك العديد من الأنواع المتوفرة لنصوص لوريم إيبسوم، ولكن الغالبية تم تعديلها بشكل ما عبر إدخال بعض النوادر أو
+          الكلمات العشوائية إلى النص. إن كنت تريد أن تستخدم نص لوريم إيبسوم ما، عليك أن تتحقق أولاً أن ليس هناك أي كلمات
+          أو عبارات محرجة أو غير لائقة مخبأة في هذا النص. بينما تعمل جميع مولّدات نصوص لوريم إيبسوم على الإنترنت على
+          إعادة تكرار مقاطع من نص لوريم إيبسوم نفسه عدة مرات بما تتطلبه الحاجة، يقوم مولّدنا هذا باستخدام كلمات من قاموس
+          يحوي على أكثر من 200 كلمة لا تينية، مضاف إليها مجموعة من الجمل النموذجية، لتكوين نص لوريم إيبسوم ذو شكل منطقي
+          قريب إلى النص الحقيقي. وبالتالي يكون النص الناتح خالي من التكرار
+          هنالك العديد من الأنواع المتوفرة لنصوص لوريم إيبسوم، ولكن الغالبية تم تعديلها بشكل ما عبر إدخال بعض النوادر أو
+          الكلمات العشوائية إلى النص. إن كنت تريد أن تستخدم نص لوريم إيبسوم ما، عليك أن تتحقق أولاً أن ليس هناك أي كلمات
+          أو عبارات محرجة أو غير لائقة مخبأة في هذا النص. بينما تعمل جميع مولّدات نصوص لوريم إيبسوم على الإنترنت على
+          إعادة تكرار مقاطع من نص لوريم إيبسوم نفسه عدة مرات بما تتطلبه الحاجة، يقوم مولّدنا هذا باستخدام كلمات من قاموس
+          يحوي على أكثر من 200 كلمة لا تينية، مضاف إليها مجموعة من الجمل النموذجية، لتكوين نص لوريم إيبسوم ذو شكل منطقي
+          قريب إلى النص الحقيقي. وبالتالي يكون النص الناتح خالي من التكرار
+        </p>
+        <!--  -->
+        <div class="bg-accent d-flex flex-column flex-md-row align-items-center justify-content-center mt-3 py-3 px-2">
+          <p role="title" class="is-primary mx-3 mb-3 mb-md-0">شارك المقال</p>
+          <!-- Social links -->
+          <nav class="nav social">
+            <a href="#"
+              class="nav-link facebook bg-primary mx-2 width-40 height-40 d-flex justify-content-center align-items-center hover-share">
+              <i class="fab fa-facebook-f fa-fw fa-lg"></i>
+            </a>
+            <a href="#"
+              class="nav-link twitter bg-primary mx-2 width-40 height-40 d-flex justify-content-center align-items-center hover-share">
+              <i class="fab fa-twitter fa-fw fa-lg"></i>
+            </a>
+            <a href="#"
+              class="nav-link instagram bg-primary mx-2 width-40 height-40 d-flex justify-content-center align-items-center hover-share">
+              <i class="fab fa-instagram fa-fw fa-lg"></i>
+            </a>
+            <a href="#"
+              class="nav-link youtube bg-primary mx-2 width-40 height-40 d-flex justify-content-center align-items-center hover-share">
+              <i class="fab fa-youtube fa-fw fa-lg"></i>
+            </a>
+            <a href="#"
+              class="nav-link whatsapp bg-primary mx-2 width-40 height-40 d-flex justify-content-center align-items-center hover-share">
+              <i class="fab fa-whatsapp fa-fw fa-lg"></i>
+            </a>
+          </nav>
         </div>
+      </div>
     </div>
+  </div>
 </section>
 
 <!-- Contact section -->

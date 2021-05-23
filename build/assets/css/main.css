@@ -426,12 +426,18 @@ a {
       .resize-svg-features-odoo {
         width: 30px;
         height: 30px; } }
+  .resize-svg-date {
+    width: 20px;
+    height: 20px; }
 
 .svg-fill-blueish {
   fill: var(--color-blueish); }
 
 .svg-fill-yellowish {
   fill: var(--color-yellowish); }
+
+.svg-fill-white {
+  fill: var(--color-white); }
 
 /* ========== Style Other ========== */
 .mt--45 {
@@ -1065,6 +1071,9 @@ textarea.form-control {
   margin: 0 -8px; }
   .navbar-nav .nav-item {
     margin: 0 8px; }
+    @media (max-width: 1200px) {
+      .navbar-nav .nav-item {
+        margin: 0 6px; } }
     .navbar-nav .nav-item .nav-link {
       color: var(--color-white);
       font-size: 14px;
@@ -1127,6 +1136,9 @@ textarea.form-control {
 
 .dropdown-menu {
   min-width: 14rem; }
+  .dropdown-menu .nav-item:focus .dropdown-item, .dropdown-menu .nav-item:hover .dropdown-item, .dropdown-menu .nav-item.active .dropdown-item {
+    color: var(--color-light);
+    background-color: var(--color-blueish); }
 
 .header {
   height: 100vh;

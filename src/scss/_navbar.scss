@@ -46,6 +46,10 @@
   margin: 0 -8px;
   .nav-item {
     margin: 0 8px;
+    
+    @media (max-width: 1200px) {
+      margin: 0 6px;
+    }
     .nav-link {
       color: color(white);
       font-size: 14px;
@@ -129,5 +133,17 @@
   // 
   &-menu {
     min-width: 14rem;
+
+    .nav-item {
+      // 
+      &:focus,
+      &:hover,
+      &.active {
+        .dropdown-item {
+          color: color(light);
+          background-color: color(blueish);
+        }
+      }
+    }
   }
 }

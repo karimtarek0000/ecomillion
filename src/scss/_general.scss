@@ -449,6 +449,11 @@ a {
       height: 30px;
     }
   }
+
+  &-date {
+    width: 20px;
+    height: 20px;
+  }
 }
 
 //
@@ -460,6 +465,10 @@ a {
 
   &-yellowish {
     fill: color(yellowish);
+  }
+
+  &-white {
+    fill: color(white);
   }
 }
 
