@@ -117,7 +117,7 @@
     }
     &:hover {
       .decimal {
-        color: color(blueish);
+        color: color(blueish) !important;
         background-color: color(yellowish);
       }
     }

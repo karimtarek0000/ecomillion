@@ -1,50 +1,53 @@
 /////////////////////////////////
 // Navbar
-jQuery(function() {
-  $('.nav-item.active').removeClass('active');
-  $(`.nav-link[href="${location.pathname}"], .dropdown-item[href="${location.pathname}"]`).closest('.nav-item').addClass('active');
+jQuery(function () {
+  $(".nav-item.active").removeClass("active");
+  $(
+    `.nav-link[href="${location.pathname}"], .dropdown-item[href="${location.pathname}"]`
+  )
+    .closest(".nav-item")
+    .addClass("active");
 });
 
 /////////////////////////////////
-// Navbar
 // COUNTER SECTION
-let section = $('#stats');
-let allCount = $('.count-num');
+let section = $("#stats");
+let allCount = $(".count-num");
 let statusScroll = true;
 // FUNCTION WINDOW SCROLL
-$(window).on('scroll', function() {
-  
-      // CONST SECTION INFORMATION OFFSET TOP MINUS 200 HEIGHT
-      const sectionInfoOffs = (section.offset().top);
-      
-      // IF STATEMENT SCROLL TOP THIS WINDOW GT SECTION INFOEMATION OFFSET
-      if( $(this).scrollTop() >= sectionInfoOffs  && statusScroll) {
-          console.log('test');
-          
-          // EACH CLASS INFORMATION CONTENT HEAD
-          allCount.each(function() {
-              // ANMIATION 
-              $(this).attr('counter', 0).animate({
-  
-                  counter: $(this).data('num')
-  
-              }, {
-  
-                  // OPTION ANIMATION
-                  duration: 2000,
-                  easing: 'swing',
-                  step: function(now) {
-                      $(this).text( Math.ceil(now) + '%' );
-                  }
-              });
-  
-          });
+$(window).on("scroll", function () {
+  // CONST SECTION INFORMATION OFFSET TOP MINUS 200 HEIGHT
+  if (Object.keys(section).length !== 0) {
+    //
+    const sectionInfoOffs = section.offset().top - 50;
+    //
+    // IF STATEMENT SCROLL TOP THIS WINDOW GT SECTION INFOEMATION OFFSET
+    if ($(this).scrollTop() >= sectionInfoOffs && statusScroll) {
+      // EACH CLASS INFORMATION CONTENT HEAD
+      allCount.each(function () {
+        // ANMIATION
+        $(this)
+          .attr("counter", 0)
+          .animate(
+            {
+              counter: $(this).data("num"),
+            },
+            {
+              // OPTION ANIMATION
+              duration: 2000,
+              easing: "swing",
+              step: function (now) {
+                $(this).text(Math.ceil(now) + "%");
+              },
+            }
+          );
+      });
 
-          // 
-          statusScroll = false
-      }
-  });
-
+      //
+      statusScroll = false;
+    }
+  }
+});
 
 /////////////////////////////////
 // Sliders
@@ -272,7 +275,7 @@ function validationForm() {
     name: null,
     phone: null,
     email: null,
-    message: null
+    message: null,
   };
 
   // Regexp
@@ -285,11 +288,11 @@ function validationForm() {
 
   // All messages errors
   const messageErrors = {
-      name: {
+    name: {
       en: "must write name",
       ar: "يجب ادخال الاسم",
     },
-      email: {
+    email: {
       en: "write correct email",
       ar: "يجب ادخال الايميل بشكل صحيح",
     },
@@ -325,9 +328,12 @@ function validationForm() {
       }
 
       // 2) Check if get id equal => NAME
-      if (getId === allInput.name.replace("#", "") || getId === allInput.name2.replace("#", "")) {
-        // 
-        const getIdMessageName = $(this).next().attr('id')
+      if (
+        getId === allInput.name.replace("#", "") ||
+        getId === allInput.name2.replace("#", "")
+      ) {
+        //
+        const getIdMessageName = $(this).next().attr("id");
         // Check if value input equal regular expersion
         if ($(this).val().match(regExp.name)) {
           dataForm[getId] = $(this).val();
@@ -336,7 +342,7 @@ function validationForm() {
           renderMessageErrorUI(getIdMessageName, "name");
         }
       }
-    
+
       // 3) Check if get id equal => EMAIL
       if (getId === allInput.email.replace("#", "")) {
         if ($(this).val().match(regExp.email)) {
@@ -364,30 +370,39 @@ function validationForm() {
     //
     nameKey == ""
       ? filedsMessage[type].text("")
-      : filedsMessage[type].text(messageErrors[nameKey]['ar']);
+      : filedsMessage[type].text(messageErrors[nameKey]["ar"]);
   }
 
   // 4) - Remove all data after send data to API
-  $(allInput.email).add(allInput.name).add(allInput.name2).add(allInput.phone).add(allInput.name).add(allInput.textArea).on('removeValue', function() {
-    $(this).val('');
-  });
+  $(allInput.email)
+    .add(allInput.name)
+    .add(allInput.name2)
+    .add(allInput.phone)
+    .add(allInput.name)
+    .add(allInput.textArea)
+    .on("removeValue", function () {
+      $(this).val("");
+    });
 
   // 5) - Event submit on form
-  form1.add(form2).on("submit", function(e) {
+  form1.add(form2).on("submit", function (e) {
     // 1) Disable behover submit
     e.preventDefault();
 
     // 2) Get attr name from form
-    const selectForm = $(this).attr('name');
+    const selectForm = $(this).attr("name");
 
     // Form 1
-    if(selectForm === 'form1') {
+    if (selectForm === "form1") {
       // 2) If all data required exsist will be send data to api
       if (dataForm.phone && dataForm.name) {
         // 1) - Send all data to API
-        const data = Object.assign({}, { name: dataForm.name, phone: dataForm.phone});
+        const data = Object.assign(
+          {},
+          { name: dataForm.name, phone: dataForm.phone }
+        );
         // 2) - Remove all data from input
-        $(allInput.name).add(allInput.phone).trigger('removeValue');
+        $(allInput.name).add(allInput.phone).trigger("removeValue");
       } else {
         // Trigger input validation
         $(allInput.phone).add(allInput.name).trigger("input");
@@ -395,22 +410,31 @@ function validationForm() {
     }
 
     // Form 2
-    if(selectForm === 'form2') {
-      if(dataForm.name2 && dataForm.email && dataForm.message) {
+    if (selectForm === "form2") {
+      if (dataForm.name2 && dataForm.email && dataForm.message) {
         // 1) - Send all data to API
-        const data = Object.assign({}, { name: dataForm.name2, email: dataForm.email, message: dataForm.message});
+        const data = Object.assign(
+          {},
+          {
+            name: dataForm.name2,
+            email: dataForm.email,
+            message: dataForm.message,
+          }
+        );
         // 2) - Remove all data from input
-        $(allInput.name2).add(allInput.email).add(allInput.textArea).trigger('removeValue');
-        
+        $(allInput.name2)
+          .add(allInput.email)
+          .add(allInput.textArea)
+          .trigger("removeValue");
       } else {
         // Trigger input validation
-        $(allInput.name2).add(allInput.email).add(allInput.textArea).trigger("input");
+        $(allInput.name2)
+          .add(allInput.email)
+          .add(allInput.textArea)
+          .trigger("input");
       }
     }
-
-    
   });
-
 }
 
 // Call fn validationForm
@@ -419,43 +443,39 @@ validationForm();
 /////////////////////////////////
 // Blog - Date
 
-function test(num) {
-  return num.toString().replace(/\d/g, d => '٠١٢٣٤٥٦٧٨٩'[d])
-}
-
 // Add in prototype jquery
-jQuery.extend({ 
-  convertToDigitArabic: function(num) {
-    return num.toString().replace(/\d/g, d => '٠١٢٣٤٥٦٧٨٩'[d])
-  }
+jQuery.extend({
+  convertToDigitArabic: function (num) {
+    return num.toString().replace(/\d/g, (d) => "٠١٢٣٤٥٦٧٨٩"[d]);
+  },
 });
-const blogDate = $('#blog-date');
-// 
-blogDate.on('setDate', function(e, date) {
+const blogDate = $("#blog-date");
+//
+blogDate.on("setDate", function (e, date) {
   const namesAllMonthes = [
-      'يناير',
-      'فبراير',
-      'مارس',
-      'ابريل',
-      'مايو',
-      'يونيو',
-      'يوليو',
-      'اغسطس',
-      'سبتمبر',
-      'اكتوبر',
-      'نوفمبر',
-      'ديسمبر'
-  ]
+    "يناير",
+    "فبراير",
+    "مارس",
+    "ابريل",
+    "مايو",
+    "يونيو",
+    "يوليو",
+    "اغسطس",
+    "سبتمبر",
+    "اكتوبر",
+    "نوفمبر",
+    "ديسمبر",
+  ];
   // const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
   const days = [
-    'الاحد',
-    'الاثنين',
-    'الثلاثاء',
-    'الاربعاء',
-    'الخميس',
-    'الجمعه',
-    'السبت'
-  ]
+    "الاحد",
+    "الاثنين",
+    "الثلاثاء",
+    "الاربعاء",
+    "الخميس",
+    "الجمعه",
+    "السبت",
+  ];
   ////////////////////////////////////////
   // 1) - Get date
   const getDate = new Date(date);
@@ -466,8 +486,10 @@ blogDate.on('setDate', function(e, date) {
   // 4) - Get Year
   const getYear = $.convertToDigitArabic(getDate.getFullYear());
 
-  return $(this).text(`${days[getDay]} , ${namesAllMonthes[getMonth]} ${getYear}`)
+  return $(this).text(
+    `${days[getDay]} , ${namesAllMonthes[getMonth]} ${getYear}`
+  );
 });
 
-// 
-blogDate.trigger('setDate', '5-20-2021');
+//
+blogDate.trigger("setDate", "5-20-2021");

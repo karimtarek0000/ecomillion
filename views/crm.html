@@ -375,7 +375,14 @@
           bg-white
         "
       >
-        <i class="fas fa-check is-accent f30 mx-3"></i>
+        <figure role="svg" class="flex-shrink-0 mx-2 py-2 rounded">
+          <svg class="resize-svg-date">
+            <use
+            xlink:href="@@webRoot/assets/img/sprite.svg#icon-check"
+            >
+            <title>check</title>
+          </svg>
+        </figure>
         <p>`+crm.property[item].desc+`</p>
       </div>
       }
