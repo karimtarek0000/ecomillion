@@ -465,7 +465,7 @@ async function includeHTML() {
             ],
           },
           googleAdvertising: {
-             features: [
+            features: [
               {
                 icon: "search2",
                 title: "Search Ads",
@@ -515,106 +515,106 @@ async function includeHTML() {
             ],
             features: [
               {
-                icon: 'statistics2',
-                title: 'Technical SEO'
+                icon: "statistics2",
+                title: "Technical SEO",
               },
               {
-                icon: 'seo',
-                title: 'On-Page SEO'
+                icon: "seo",
+                title: "On-Page SEO",
               },
               {
-                icon: 'search',
-                title: 'المحتوى SEO'
+                icon: "search",
+                title: "المحتوى SEO",
               },
               {
-                icon: 'offpage',
-                title: 'Off-Page SEO'
+                icon: "offpage",
+                title: "Off-Page SEO",
               },
               {
-                icon: 'seo2',
-                title: 'المحلي SEO'
+                icon: "seo2",
+                title: "المحلي SEO",
               },
               {
-                icon: 'mobile-phone',
-                title: 'Mobile SEO'
+                icon: "mobile-phone",
+                title: "Mobile SEO",
               },
               {
-                icon: 'seotrade',
-                title: 'التجارة اإللكترونية SEO'
+                icon: "seotrade",
+                title: "التجارة اإللكترونية SEO",
               },
               {
-                icon: 'speedometer',
-                title: 'مؤشرات قياس الأداء'
+                icon: "speedometer",
+                title: "مؤشرات قياس الأداء",
               },
               {
-                icon: 'layer',
-                title: 'أدوات احترافية'
-              }
-            ]
+                icon: "layer",
+                title: "أدوات احترافية",
+              },
+            ],
           },
           brandBuilding: {
             features: [
               {
-                icon: 'domain-registration',
-                title: 'الإسم والدومين'
+                icon: "domain-registration",
+                title: "الإسم والدومين",
               },
               {
-                icon: 'vector',
-                title: 'تصميم العلامة التجارية'
+                icon: "vector",
+                title: "تصميم العلامة التجارية",
               },
               {
-                icon: 'sketch',
-                title: 'تصميم الشعار'
+                icon: "sketch",
+                title: "تصميم الشعار",
               },
               {
-                icon: 'create',
-                title: 'رسومات الشعار'
+                icon: "create",
+                title: "رسومات الشعار",
               },
               {
-                icon: 'redesign',
-                title: 'إعادة تصميم الهوية التجارية'
+                icon: "redesign",
+                title: "إعادة تصميم الهوية التجارية",
               },
               {
-                icon: 'support',
-                title: 'إستشارات'
-              }
-            ]
+                icon: "support",
+                title: "إستشارات",
+              },
+            ],
           },
           trainingConsulting: {
             features: [
               {
-                icon: 'trade',
-                title: 'أساسيات التجارة الإلكترونية'
+                icon: "trade",
+                title: "أساسيات التجارة الإلكترونية",
               },
               {
-                icon: 'shopping',
-                title: 'شراء منتجات مربحة'
+                icon: "shopping",
+                title: "شراء منتجات مربحة",
               },
               {
-                icon: 'price-tag',
-                title: 'التسعير'
+                icon: "price-tag",
+                title: "التسعير",
               },
               {
-                icon: 'store',
-                title: 'إدارة المتجر بالكامل'
+                icon: "store",
+                title: "إدارة المتجر بالكامل",
               },
               {
-                icon: 'megaphone',
-                title: 'التسويق الإلكتروني'
+                icon: "megaphone",
+                title: "التسويق الإلكتروني",
               },
               {
-                icon: 'social-media',
-                title: 'إدارة مواقع التواصل'
+                icon: "social-media",
+                title: "إدارة مواقع التواصل",
               },
               {
-                icon: 'vector',
-                title: 'بناء العلامة التجارية'
+                icon: "vector",
+                title: "بناء العلامة التجارية",
               },
               {
-                icon: 'interface',
-                title: 'والمزيد'
-              }
-            ]
+                icon: "interface",
+                title: "والمزيد",
+              },
+            ],
           },
           slider: [
             "abqary.png",
