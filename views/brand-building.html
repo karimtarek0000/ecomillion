@@ -1,5 +1,5 @@
 @@include( './includes/header.html', {"webRoot": ".", "document-title":
-"EcoMillion-brand-building", "page-id": "brand-building"} )
+"EcoMillin-brand-building", "page-id": "brand-building"} )
 
 <!-- Header -->
 <header class="header" id="header">
@@ -11,16 +11,23 @@
         row
         g-0
         align-items-center
-        justify-content-center align-content-center justify-content-lg-between
+        justify-content-center
+        align-content-center
+        justify-content-lg-between
         h-100
       "
     >
       <div class="col-md-6 opacity-0" role="info" data-anim="slideRight">
         <h1 role="head-title" class="f50 is-accent my-4 my-lg-5">
-         بناء العلامة التجارية
+          بناء العلامة التجارية
         </h1>
-        <p role="description" class="f16 text-white mb-2 mb-lg-5 mx-auto my-4 lh-lg">
-        علامتك التجارية هى اكثر الأصول الأكثر قيمه لشركتك تمكنك بناء العلامه التجارية من التعرف على العملاء والتنافس فى الاسواق، تعزيز المصداقية، سهوله الشراء، ولاء العملاء. 
+        <p
+          role="description"
+          class="f16 text-white mb-2 mb-lg-5 mx-auto my-4 lh-lg"
+        >
+          علامتك التجارية هى اكثر الأصول الأكثر قيمه لشركتك تمكنك بناء العلامه
+          التجارية من التعرف على العملاء والتنافس فى الاسواق، تعزيز المصداقية،
+          سهوله الشراء، ولاء العملاء.
         </p>
         <!-- Form -->
         <form id="form1" name="form1" class="row g-0 justify-content-between">
@@ -63,21 +70,27 @@
         role="image"
         data-anim="slideLeft"
       >
-        <img class="img-fluid h-vw-30" src="@@webRoot/assets/img/identy.svg" alt="" />
+        <img
+          class="img-fluid h-vw-30"
+          src="@@webRoot/assets/img/identy.svg"
+          alt=""
+        />
       </figure>
     </div>
   </div>
 </header>
 
 <!-- Section -->
-<section class="sec-block change overflow-hidden opacity-0" data-anim="slideUp" id="tools">
+<section
+  class="sec-block change overflow-hidden opacity-0"
+  data-anim="slideUp"
+  id="tools"
+>
   <!--  -->
   <div class="container">
     <!--  -->
     <div class="sec-head text-center margin-title-section">
-      <h2 class="title" data-text="لأنك تستحق الأفضل">
-        لأنك تستحق الأفضل
-      </h2>
+      <h2 class="title" data-text="لأنك تستحق الأفضل">لأنك تستحق الأفضل</h2>
     </div>
     <!--  -->
     <div class="sec-content">
@@ -96,11 +109,14 @@
                 <title>`+brandBuilding.features[item].icon+`</title>
               </svg>
             </figure>
-            <h4 class="card-name mb-3 mb-md-4 f25 white-space-no text-capitalize">
+            <h4
+              class="card-name mb-3 mb-md-4 f25 white-space-no text-capitalize"
+            >
               `+brandBuilding.features[item].title+`
             </h4>
             <p class="card-desc is-dimmed px-lg-4 lh-lg">
-          مشاريع الانترنت هي المستقبل فجميع الناس الان تقضي اوقات طويلة على تطبيقات الجوال والمواقع
+              مشاريع الانترنت هي المستقبل فجميع الناس الان تقضي اوقات طويلة على
+              تطبيقات الجوال والمواقع
             </p>
           </div>
         </div>
@@ -111,32 +127,52 @@
 </section>
 
 <!-- works section -->
-<section class="sec-block overflow-hidden p-0 opacity-0" data-anim="slideUp" id="works2">
-    <div class="container">
-        <div class="sec-head text-center margin-title-section">
-            <h2 class="title" data-text="أعمالنا في بناء العلامة التجارية">
-               أعمالنا في بناء العلامة التجارية
-            </h2>
-        </div>
-        <div class="sec-content margin-100">
-            <div class="row position-relative">
-                <div class="col-12">
-                    <div class="slider owl-carousel nav-yellowish">
-                        @@for (var item = 0; item < slider.length; item++){ <div class="slider-item text-center">
-                            <figure class="mx-auto"><img src=@@webRoot/assets/img/slider/`+slider[item]+` alt="">
-                            </figure>
-                            <div class="hover">
-                                <img src="@@webRoot/assets/img/logo.png" alt="">
-                                <p class="fBold mt-3">تصميم موقع تعريفي بشركة</p>
-                            </div>
-                    </div>
-                    }
-                </div>
+<section
+  class="sec-block overflow-hidden p-0 opacity-0"
+  data-anim="slideUp"
+  id="works2"
+>
+  <div class="container">
+    <div class="sec-head text-center margin-title-section">
+      <h2 class="title" data-text="أعمالنا في بناء العلامة التجارية">
+        أعمالنا في بناء العلامة التجارية
+      </h2>
+    </div>
+    <div class="sec-content margin-100">
+      <div class="row position-relative">
+        <div class="col-12">
+          <div class="slider owl-carousel nav-yellowish">
+            @@for (var item = 0; item < slider.length; item++){
+            <div class="slider-item text-center">
+              <figure class="mx-auto">
+                <img src=@@webRoot/assets/img/slider/`+slider[item]+` alt="">
+              </figure>
+              <div class="hover">
+                <img src="@@webRoot/assets/img/logo.png" alt="" />
+                <p class="fBold mt-3">تصميم موقع تعريفي بشركة</p>
+              </div>
             </div>
-            <a href="https://google.com" class="btn yellowish position-absolute z-index-10 bottom-0 start-0 ms-2 w-auto" target="_blank">شاهد كل الأعمال</a>
+            }
+          </div>
         </div>
+        <a
+          href="https://google.com"
+          class="
+            btn
+            yellowish
+            position-absolute
+            z-index-10
+            bottom-0
+            start-0
+            ms-2
+            w-auto
+          "
+          target="_blank"
+          >شاهد كل الأعمال</a
+        >
+      </div>
     </div>
-    </div>
+  </div>
 </section>
 
 @@include('./includes/footer.html', {"webRoot": "."})

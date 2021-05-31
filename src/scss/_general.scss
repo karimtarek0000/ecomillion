@@ -730,9 +730,38 @@ a {
   }
 }
 
+//
 .z-index {
   //
   &-10 {
     z-index: 10;
+  }
+}
+
+//
+.navbar.fixed-nav {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: block;
+  z-index: 9999;
+  background-color: $blueish;
+  transition: all 0.2s ease;
+}
+
+//
+.hover {
+  //
+  &__blueish {
+    transition: all 0.3s ease;
+    @media (hover: hover) {
+      //
+      &:hover {
+        background-color: color(blueish) !important;
+        color: color(light);
+      }
+    }
   }
 }
