@@ -49,14 +49,14 @@ footer {
       padding: 16px 0;
       border-bottom: 1px solid rgba($white, 0.1);
       @media (min-width: $desktops) {
-        padding: 16px 0 16px 40px;
+        padding: 16px 10px;
       }
     }
   }
 
   .contacts {
     .nav-item {
-      padding: 16px 0 16px 40px;
+      padding: 16px 3px;
       border-bottom: 1px solid rgba($white, 0.1);
       i {
         font-size: 24px;

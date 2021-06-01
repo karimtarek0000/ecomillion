@@ -97,6 +97,18 @@
   }
 }
 
+html[dir=ltr] {
+ #mainSlider {
+  .text-side {
+    .content {
+      @media (min-width: $tablets) {
+        text-align: left;
+      }
+    }
+  }
+}
+}
+
 .numeric-list {
   width: 85%;
   li {
@@ -192,17 +204,6 @@
     }
   }
 }
-
-// #works{
-//     @include watermark('../img/logo-bg.svg');
-//     &::after{
-//         left: -40%;
-//         left: unset;
-//         transform: translate(0, -50%);
-//         height: 1020px;
-//         width: 1640px;
-//     }
-// }
 
 .sec-block {
   //

@@ -73,7 +73,7 @@
                 "
               >
                 <span>1999</span>
-                <span class="f16">ريال</span>
+                <span class="f16">دولار</span>
               </p>
             </div>
             <!-- -->
@@ -139,7 +139,7 @@
                 "
               >
                 <span>3499</span>
-                <span class="f16">ريال</span>
+                <span class="f16">دولار</span>
               </p>
             </div>
             <!-- -->
@@ -205,7 +205,7 @@
                 "
               >
                 <span>5199</span>
-                <span class="f16">ريال</span>
+                <span class="f16">دولار</span>
               </p>
             </div>
             <!-- -->
@@ -347,102 +347,7 @@
   </div>
 </section>
 
-<!-- works section -->
-<section
-  class="sec-block sec-block--site overflow-hidden bg-light-primary opacity-0"
-  id="works"
-  data-anim="slideUp"
->
-  <div class="container">
-    <div class="sec-head text-center">
-      <h2 class="title" data-text="أعمال ابتدي">أعمال ابتدي</h2>
-      <h2 class="is-primary f50">شريكنا في النجاح</h2>
-    </div>
-    <div class="sec-content">
-      <div class="row position-relative">
-        <div class="col-12">
-          <div class="slider owl-carousel nav-blueish">
-            @@for (var item = 0; item < slider.length; item++){
-            <a class="slider-item text-center d-block" href="#" target="_blank">
-              <figure class="mx-auto">
-                <img src=@@webRoot/assets/img/slider/`+slider[item]+` alt="">
-              </figure>
-              <div class="hover">
-                <img src="@@webRoot/assets/img/logo.png" alt="" />
-                <p class="fBold mt-3">تصميم موقع تعريفي بشركة</p>
-              </div>
-            </a>
-            }
-          </div>
-        </div>
-        <a
-          href=""
-          class="
-            btn
-            blueish
-            position-absolute
-            bottom-0
-            start-0
-            ms-2
-            w-auto
-            z-index-10
-          "
-          target="_blank"
-          >شاهد كل أعمال إبتدي</a
-        >
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- works 2 section -->
-<section
-  class="sec-block overflow-hidden opacity-0"
-  id="works2"
-  data-anim="slideUp"
->
-  <div class="container">
-    <div class="sec-head text-center">
-      <h2 class="title" data-text="أعمالنا في التصميم والانتاج">
-        أعمالنا في التصميم والانتاج
-      </h2>
-    </div>
-    <div class="sec-content">
-      <div class="row position-relative">
-        <div class="col-12">
-          <div class="slider owl-carousel nav-yellowish">
-            @@for (var item = 0; item < slider.length; item++){
-            <a class="slider-item text-center d-block" href="#" target="_blank">
-              <figure class="mx-auto">
-                <img src=@@webRoot/assets/img/slider/`+slider[item]+` alt="">
-              </figure>
-              <div class="hover">
-                <img src="@@webRoot/assets/img/logo.png" alt="" />
-                <p class="fBold mt-3">تصميم موقع تعريفي بشركة</p>
-              </div>
-            </a>
-            }
-          </div>
-        </div>
-        <a
-          href=""
-          class="
-            btn
-            yellowish
-            position-absolute
-            bottom-0
-            start-0
-            ms-2
-            w-auto
-            z-index-10
-          "
-          target="_blank"
-          >كل أعمال التصميم والإنتاج</a
-        >
-      </div>
-    </div>
-  </div>
-</section>
-
+@@include('./includes/allIbtdi.html', {"webRoot": "."})
+@@include('./includes/allDesignAndProduction.html', {"webRoot": "."})
 @@include('./includes/contact.html', {"webRoot": "."})
 @@include('./includes/footer.html', {"webRoot": "."})

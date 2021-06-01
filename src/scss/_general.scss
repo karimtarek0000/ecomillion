@@ -765,3 +765,13 @@ a {
     }
   }
 }
+
+////////////////////////////////
+// When change direction
+html[dir="ltr"] {
+  // 
+  .accordion-button::after {
+    margin-right: 0;
+    margin-left: auto;
+  }
+}

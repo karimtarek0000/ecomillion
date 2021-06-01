@@ -21,6 +21,7 @@
     opacity: 1;
   }
 }
+
 // SLIDE LEFT
 @keyframes slideLeft {
   from {
@@ -32,6 +33,7 @@
     opacity: 1;
   }
 }
+
 // SLIDE RIGHT
 @keyframes slideRight {
   from {
@@ -56,6 +58,7 @@
   }
 }
 
+//
 @keyframes scale1 {
   0% {
     transform: scale(0);
@@ -109,6 +112,26 @@
     //
     @media (min-width: $tablets) {
       animation: scale1 0.5s linear forwards;
+    }
+  }
+}
+
+// When direction change
+html[dir="ltr"] {
+  //
+  .anim {
+    $setTransition: 1s ease-in-out both;
+
+    //
+    &__slideLeft {
+      animation: slideRight $setTransition;
+      will-change: animation;
+    }
+
+    //
+    &__slideRight {
+      animation: slideLeft $setTransition;
+      will-change: animation;
     }
   }
 }

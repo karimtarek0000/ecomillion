@@ -1,0 +1,48 @@
+<!-- works 2 section -->
+<section
+  class="sec-block overflow-hidden opacity-0"
+  id="works2"
+  data-anim="slideUp"
+>
+  <div class="container">
+    <div class="sec-head text-center">
+      <h2 class="title" data-text="أعمالنا في التصميم والانتاج">
+        أعمالنا في التصميم والانتاج
+      </h2>
+    </div>
+    <div class="sec-content">
+      <div class="row position-relative">
+        <div class="col-12">
+          <div class="slider owl-carousel nav-yellowish">
+            @@for (var item = 0; item < slider.length; item++){
+            <a class="slider-item text-center d-block" href="#" target="_blank">
+              <figure class="mx-auto">
+                <img src=@@webRoot/assets/img/slider/`+slider[item]+` alt="">
+              </figure>
+              <div class="hover">
+                <img src="@@webRoot/assets/img/logo.png" alt="" />
+                <p class="fBold mt-3">تصميم موقع تعريفي بشركة</p>
+              </div>
+            </a>
+            }
+          </div>
+        </div>
+        <a
+          href="/design-production.html"
+          class="
+            btn
+            yellowish
+            position-absolute
+            bottom-0
+            start-0
+            ms-2
+            w-auto
+            z-index-10
+          "
+          target="_blank"
+          >كل أعمال التصميم والإنتاج</a
+        >
+      </div>
+    </div>
+  </div>
+</section>

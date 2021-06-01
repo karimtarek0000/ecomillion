@@ -1,4 +1,33 @@
 /////////////////////////////////
+// Change direction site
+const btnLang = $("#lang");
+//
+btnLang.click(function (e) {
+  //
+  e.preventDefault();
+
+  //
+  if ($(this).text() === "AR") {
+    $(this).text("EN");
+    $(document).attr("dir", "rtl");
+    localStorage.setItem("langSite", "AR");
+  } else {
+    $(this).text("AR");
+    $(document).attr("dir", "ltr");
+    localStorage.setItem("langSite", "EN");
+  }
+});
+
+//
+const getlangLocalStorage = localStorage.getItem("langSite");
+
+//
+if (getlangLocalStorage !== null) btnLang.text(getlangLocalStorage);
+
+//
+btnLang.trigger("click");
+
+/////////////////////////////////
 // Navbar
 jQuery(function () {
   $(".nav-item.active").removeClass("active");
@@ -250,6 +279,7 @@ function validationForm() {
   // All input
   const allInput = {
     phone: "#phone",
+    phone2: "#phone2",
     name: "#name",
     name2: "#name2",
     email: "#email",
@@ -261,6 +291,7 @@ function validationForm() {
     messageName1: $("#messageName1"),
     messageName2: $("#messageName2"),
     messagePhone: $("#messagePhone"),
+    messagePhone2: $("#messagePhone2"),
     messageEmail: $("#messageEmail"),
     messageTextArea: $("#messageTextArea"),
   };
@@ -304,6 +335,7 @@ function validationForm() {
   // 1) - Get value from input phone and name
   $(allInput.email)
     .add(allInput.phone)
+    .add(allInput.phone2)
     .add(allInput.name)
     .add(allInput.name2)
     .add(allInput.textArea)
@@ -312,13 +344,18 @@ function validationForm() {
       const getId = $(this).attr("id");
 
       // 1) Check if get id equal => PHONE
-      if (getId === allInput.phone.replace("#", "")) {
+      if (
+        getId === allInput.phone.replace("#", "") ||
+        getId === allInput.phone2.replace("#", "")
+      ) {
+        //
+        const getIdMessagePhone = $(this).next().attr("id");
         // Check if value input equal regular expersion
         if ($(this).val().match(regExp.phone)) {
           dataForm.phone = $(this).val();
-          renderMessageErrorUI("messagePhone");
+          renderMessageErrorUI(getIdMessagePhone);
         } else {
-          renderMessageErrorUI("messagePhone", "phone");
+          renderMessageErrorUI(getIdMessagePhone, "phone");
         }
       }
 
@@ -331,7 +368,7 @@ function validationForm() {
         const getIdMessageName = $(this).next().attr("id");
         // Check if value input equal regular expersion
         if ($(this).val().match(regExp.name)) {
-          dataForm[getId] = $(this).val();
+          dataForm.name = $(this).val();
           renderMessageErrorUI(getIdMessageName);
         } else {
           renderMessageErrorUI(getIdMessageName, "name");
@@ -373,6 +410,7 @@ function validationForm() {
     .add(allInput.name)
     .add(allInput.name2)
     .add(allInput.phone)
+    .add(allInput.phone2)
     .add(allInput.name)
     .add(allInput.textArea)
     .on("removeValue", function () {
@@ -398,6 +436,7 @@ function validationForm() {
         );
         // 2) - Remove all data from input
         $(allInput.name).add(allInput.phone).trigger("removeValue");
+        console.log(data);
       } else {
         // Trigger input validation
         $(allInput.phone).add(allInput.name).trigger("input");
@@ -406,24 +445,34 @@ function validationForm() {
 
     // Form 2
     if (selectForm === "form2") {
-      if (dataForm.name2 && dataForm.email && dataForm.message) {
+      if (
+        dataForm.name &&
+        dataForm.phone &&
+        dataForm.email &&
+        dataForm.message
+      ) {
         // 1) - Send all data to API
         const data = Object.assign(
           {},
           {
-            name: dataForm.name2,
+            name: dataForm.name,
+            phone: dataForm.phone,
             email: dataForm.email,
             message: dataForm.message,
           }
         );
         // 2) - Remove all data from input
         $(allInput.name2)
+          .add(allInput.phone2)
           .add(allInput.email)
           .add(allInput.textArea)
           .trigger("removeValue");
+
+        console.log(data);
       } else {
         // Trigger input validation
         $(allInput.name2)
+          .add(allInput.phone2)
           .add(allInput.email)
           .add(allInput.textArea)
           .trigger("input");
